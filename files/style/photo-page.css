@@ -1,0 +1,69 @@
+.album-card{
+	width: 80%;
+	height: 90%;
+	margin: 2% 10%;
+	border-radius: 10px;
+	box-sizing: content-box;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+.album-card:hover{
+	border: 2px solid #ccc;
+	margin: calc(2% - 2px) calc(10% - 2px);
+}
+.album-card a{text-decoration: none}
+.album-card__wrap{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.4);
+	text-decoration: none;
+}
+.album-card__wrap:hover{background-color: rgba(0,0,0,0.6)}
+.album-card__title{
+	margin: 0;
+	text-align: center;
+	font-size: 20pt;
+	color: white;
+	cursor: pointer;
+}
+.album-card__date{
+	color: #eee;
+	cursor: pointer;
+}
+.album-card:hover .album-card__title,.album-card__date{text-shadow: 0 0 10px black}
+.album-card__btn{
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+	padding: 9px 12px;
+	background-color: #fff;
+	color: #000;
+	border: 0;
+	border-radius: 5px;
+	transition: opacity 60ms linear;
+	opacity: 1;
+	cursor: pointer;
+	box-sizing: border-box;
+	outline: 0;
+}
+.album-card:hover .album-card__btn{box-shadow: 0 0 10px black}
+.album-card__btn:hover{opacity: 0.9}
+.album-card__btn-icon{
+	background-image: url(../vectors/sparkle.svg);
+	background-size: cover;
+	background-position: center;
+	width: 12px;
+	height: 12px;
+	background-position: 50%;
+	background-size: auto;
+	margin-right: 4px;
+}
+.album-card__btn-text{
+	font-size: 13px;
+	line-height: 12px;
+}

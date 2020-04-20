@@ -1,0 +1,24 @@
+.youtube-video{
+	margin: 2% 12.5%;
+	width: 75%;
+	box-sizing: content-box;
+	height: 90%;
+	border-radius: 20px;
+	transition: 0.1s;
+}
+.youtube-video:hover{
+	box-shadow: 0 0 20px black;
+	border: 2px solid #ccc;
+	margin: calc(2% - 2px) calc(12.5% - 2px);
+}
+.youtube-playlist{
+	margin: 2px;
+	width: 100%;
+	height: 100vh;
+	border-radius: 20px;
+}
+.youtube-playlist:hover{
+	margin: 0;
+	box-shadow: 0 0 20px black;
+	border: 2px solid #ccc;
+}
