@@ -155,7 +155,7 @@ footer{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	min-height: 10vh;
+	min-height: (3vh + 16px + 24px);
 	color: white;
 	background-color: rgba(0,0,0,0.7);
 	text-align: center;
