@@ -59,6 +59,7 @@ nav{
 	font-size: 3vh;
 	text-transform: uppercase;
 	transition: 0.1s;
+	z-index: 54;
 }
 nav:hover{background-color: rgba(0,0,0,0.8)}
 .navbar{
@@ -182,6 +183,7 @@ footer{
 	flex-shrink: 0;
 	cursor: default;
 	transition: 0.1s;
+	z-index: 54;
 }
 footer:hover{background-color: rgba(0,0,0,0.8)}
 footer h3{
