@@ -8,13 +8,13 @@ body{
 	background: url(../images/texture.jpg);
 	background-size: contain;
 }
-::-webkit-scrollbar-track {background-color:rgba(0,0,0,0.9)}
+::-webkit-scrollbar-track {background-color:rgba(0,0,0,.9)}
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: url(../images/texture.jpg);
 	background-size: cover;
 }
-::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,0.6)}
+::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.6)}
 ::-webkit-scrollbar{width: 20px}
 header{
 	position: relative;
@@ -53,22 +53,22 @@ nav{
 	display: flex;
 	align-items: center;
 	height: 10vh;
-	background-color: rgba(0,0,0,0.7);
-	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,.7);
+	box-shadow: 0 0 20px rgba(0,0,0,.8);
 	font-weight: bold;
 	font-size: 3vh;
 	text-transform: uppercase;
-	transition: 0.1s;
+	transition: .1s;
 	z-index: 54;
 }
-nav:hover{background-color: rgba(0,0,0,0.8)}
+nav:hover{background-color: rgba(0,0,0,.8)}
 .navbar{
 	position: relative;
 	margin: auto;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	transition: 0.5s;
+	transition: .5s;
 }
 .active{
 	text-decoration: underline;
@@ -86,7 +86,7 @@ nav:hover{background-color: rgba(0,0,0,0.8)}
 	position: absolute;
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(216,216,216,0.8);
+	background: rgba(216,216,216,.8);
 	font-size: 3vh;
 	text-align: center;
 	border-radius: 20px;
@@ -108,7 +108,7 @@ nav:hover{background-color: rgba(0,0,0,0.8)}
 }
 .navlist-item:last-child{border-bottom: 0}
 .navlist-item:hover{
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,.25);
 	font-size: 4vh;
 }
 .block{
@@ -118,8 +118,8 @@ nav:hover{background-color: rgba(0,0,0,0.8)}
 	width: 90%;
 	height: 22.5%;
 	border-radius: 5px;
-	background: rgba(0,0,0,0.6);
-	box-shadow: 0 0 20px rgba(0,0,0,0.7);
+	background: rgba(0,0,0,.6);
+	box-shadow: 0 0 20px rgba(0,0,0,.7);
 	color: white;
 }
 .section{
@@ -168,7 +168,7 @@ p a:hover{color: #ccf}
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 20px black;
-	transition: 0.2s;
+	transition: .2s;
 }
 .network-link:hover{border: 4px solid #ccc}
 footer{
@@ -177,15 +177,15 @@ footer{
 	width: 100%;
 	min-height: calc(3vh + 16px + 24px);
 	color: white;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,.7);
 	text-align: center;
-	box-shadow: 0 0 20px rgba(0,0,0,0.8);
+	box-shadow: 0 0 20px rgba(0,0,0,.8);
 	flex-shrink: 0;
 	cursor: default;
-	transition: 0.1s;
+	transition: .1s;
 	z-index: 54;
 }
-footer:hover{background-color: rgba(0,0,0,0.8)}
+footer:hover{background-color: rgba(0,0,0,.8)}
 footer h3{
 	margin: 10px auto;
 	font-size: 3vh;

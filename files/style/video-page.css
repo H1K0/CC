@@ -4,7 +4,7 @@
 	box-sizing: content-box;
 	height: 90%;
 	border-radius: 20px;
-	transition: 0.1s;
+	transition: .1s;
 }
 .youtube-video:hover{
 	box-shadow: 0 0 20px black;

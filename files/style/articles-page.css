@@ -20,7 +20,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,.4);
 	text-decoration: none;
 }
 .article-card__wrap:hover{background-color: rgba(0,0,0,0.6)}
@@ -52,7 +52,7 @@
 	outline: 0;
 }
 .article-card:hover .article-card__btn{box-shadow: 0 0 10px black}
-.article-card__btn:hover{opacity: 0.9}
+.article-card__btn:hover{opacity: .9}
 .article-card__btn-icon{
 	background-image: url(../vectors/sparkle.svg);
 	background-size: auto;
