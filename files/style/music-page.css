@@ -43,6 +43,7 @@ a{text-decoration: none;}
 .btn{
 	margin: auto;
 	margin-top: 24px;
+	margin-bottom: 5vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,9 +59,15 @@ a{text-decoration: none;}
 	cursor: pointer;
 	box-sizing: border-box;
 	outline: 0;
+	transition: .25s;
 }
-.btn:hover{box-shadow: 0 0 10px black}
-.btn:hover{opacity: 0.9}
+.btn:hover{
+	margin-bottom: 0;
+	width: 40%;
+	height: 15vh;
+	box-shadow: 0 0 10px black;
+	opacity: 0.9;
+}
 .btn-icon{
 	background-image: url(../images/headphones.png);
 	background-size: cover;
