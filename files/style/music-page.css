@@ -1,5 +1,9 @@
+.section{
+	flex-flow: column no-wrap;
+	justify-content: flex-start;
+}
 .ng-song{
-	margin: 2%;
+	margin: 1% 2%;
 	width: 96%;
 	box-sizing: content-box;
 	background: rgba(0,0,0,.8);
@@ -11,7 +15,7 @@
 	box-shadow: 0 0 20px black;
 	text-shadow: 0 0 5px white;
 	border: 2px solid #ccc;
-	margin: calc(2% - 2px);
+	margin: calc(1% - 2px) calc(2% - 2px);
 }
 a{text-decoration: none;}
 .ng-song a{
