@@ -132,6 +132,7 @@ nav:hover{background-color: rgba(0,0,0,.8)}
 	border: 1px solid white;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	list-style: none;
 }
 .section::-webkit-scrollbar{width: 15px}
 h1{
@@ -159,6 +160,7 @@ p a:hover{color: #ccf}
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: nowrap;
+	list-style: none;
 }
 .network-link{
 	width: 100px;
