@@ -54,7 +54,7 @@
 .article-card:hover .article-card__btn{box-shadow: 0 0 10px black}
 .article-card__btn:hover{opacity: .9}
 .article-card__btn-icon{
-	background-image: url(../vectors/sparkle.svg);
+	background-image: url(../images/sparkle.svg);
 	background-size: auto;
 	background-position: center;
 	width: 12px;

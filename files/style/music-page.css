@@ -69,7 +69,7 @@ a{text-decoration: none;}
 	opacity: .9;
 }
 .btn-icon{
-	background-image: url(../images/headphones.png);
+	background-image: url(../images/headphones.svg);
 	background-size: cover;
 	background-position: center;
 	width: 6vh;

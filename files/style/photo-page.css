@@ -54,7 +54,7 @@
 .album-card:hover .album-card__btn{box-shadow: 0 0 10px black}
 .album-card__btn:hover{opacity: .9}
 .album-card__btn-icon{
-	background-image: url(../vectors/sparkle.svg);
+	background-image: url(../images/sparkle.svg);
 	background-size: cover;
 	background-position: center;
 	width: 12px;
