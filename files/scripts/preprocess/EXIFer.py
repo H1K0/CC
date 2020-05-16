@@ -25,7 +25,7 @@ def exif(image):
 			elif tag=='EXIF FocalLength':
 				if '/' in str(data[tag]):out['Focal Length']=f'{round(int(str(data[tag]).split("/")[0])/int(str(data[tag]).split("/")[1]),1)} mm'
 				else:out['Focal Length']=f'{data[tag]} mm'
-		except Exception as e:print(e)
+		except Exception as e:print(f'{image}: {e}')
 	return out
 
 if __name__=='__main__':
