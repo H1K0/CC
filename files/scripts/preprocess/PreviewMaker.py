@@ -22,12 +22,10 @@ def main(path):
 				print(f'Input size:  {win}x{hin} px')
 				print(f'Output size: {wout}x{hout} px')
 
-print('Directory to make previews (type # to exit):')
-req=input('../images/')
-while req!='#':
-	try:main('../images/'+req)
+print('=== PreviewMaker ===\n © Masahiko AMANO a.k.a. H1K0, 2020')
+while 1:
+	print('\nDirectory to make previews:')
+	req=input('../../images/')
+	try:main('../../images/'+req)
 	except Exception as e:print(e)
-	else:
-		print('\n')
-		print('Directory to make previews (type # to exit):')
-		req=input('../images/')
+	else:print('SUCCESS')
