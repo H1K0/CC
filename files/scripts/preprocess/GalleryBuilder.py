@@ -78,7 +78,7 @@ f'<div class="photo"><a class="link" href="{"../"*bool(phlist)}../../files/image
 	if phlist:
 		with open(f'../../../{lang}/photos/date/{name}.html','w',encoding='utf-8')as out:out.write(data)
 	else:
-		with open(f'../../../{lang}/albums/{link}.html','w',encoding='utf-8')as out:out.write(data)
+		with open(f'../../../{lang}/{link}.html','w',encoding='utf-8')as out:out.write(data)
 
 
 if __name__=='__main__':
