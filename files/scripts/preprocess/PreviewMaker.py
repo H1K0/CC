@@ -2,9 +2,10 @@ from PIL import Image
 from os import listdir,access,F_OK,mkdir
 from os.path import dirname
 
-def main(path):
-	if path[-1]not in('','\\'):path+='/'
+def make_previews(path):
+	if path[-1]not in('/','\\'):path+='/'
 	path=dirname(path)
+	if not access(path+'/preview',F_OK):mkdir(path+'/preview')
 	for file in listdir(path):
 		if file[-4:]=='.jpg':
 			pic=Image.open(f'{path}/{file}')
@@ -22,10 +23,11 @@ def main(path):
 				print(f'Input size:  {win}x{hin} px')
 				print(f'Output size: {wout}x{hout} px')
 
-print('=== PreviewMaker ===\n © Masahiko AMANO a.k.a. H1K0, 2020')
-while 1:
-	print('\nDirectory to make previews:')
-	req=input('../../images/')
-	try:main('../../images/'+req)
-	except Exception as e:print(e)
-	else:print('SUCCESS')
+if __name__=='__main__':
+	print('=== PreviewMaker ===\n © Masahiko AMANO a.k.a. H1K0, 2020')
+	while 1:
+		print('\nDirectory to make previews:')
+		req=input('../../images/')
+		try:make_previews('../../images/'+req)
+		except Exception as e:print(e)
+		else:print('SUCCESS')

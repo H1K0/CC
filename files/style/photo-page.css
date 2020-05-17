@@ -75,3 +75,43 @@
 	font-size: 13px;
 	line-height: 12px;
 }
+.dates{
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	list-style: none;
+}
+.dates h3{
+	position: relative;
+	padding: 2% 2%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	transition: .1s;
+	cursor: pointer;
+}
+.dates h3:hover{
+	box-shadow: 0 0 20px black;
+	text-shadow: 0 0 5px white;
+	border: 2px solid #ccc;
+	padding: calc(2% - 2px) 5%;
+}
+.dates a{
+	text-decoration: none;
+	color: white;
+}
+.year{
+	position: relative;
+	margin: 1% 0;
+	width: 96%;
+}
+.year-value{background: rgba(0,0,0,.9)}
+.months{
+	display: none;
+	list-style: inherit;
+}
+.month-value{background: rgba(0,0,0,.8)}
+.days{
+	display: none;
+	list-style: inherit;
+}
+.day-value{background: rgba(0,0,0,.7)}

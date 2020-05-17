@@ -1,30 +1,42 @@
 from EXIFer import exif
+from os.path import dirname,basename
 
-def build(name,link,lnth,lang):
+def build(name,link,lnth,lang,phlist=[]):
 	def alt_title():
-		if lang=='en':return f'alt="{name} -> Photo #{i}" title="{name} -> Photo #{i} (Click to view fullsized)"'
-		if lang=='ru':return f'alt="{name} -> Фото №{i}" title="{name} -> Фото №{i} (Кликни, чтобы глянуть фулл)"'
-		if lang=='jp':return f'alt="{name} -> 写真第{i}枚" title="{name} -> 写真第{i}枚（クリックして完全版を見る）"'
-	if lang=='en':title=f'Masahiko AMANO -> Album «{name}»'
-	elif lang=='ru':title=f'Масахико АМАНО -> Альбом «{name}»'
-	else:title=f'天人楽彦 -> アルバム「{name}」'
+		if lang=='en':return f'alt="{name} -> Photo #{i+1}" title="{name} -> Photo #{i} (Click to view fullsized)"'
+		if lang=='ru':return f'alt="{name} -> Фото №{i+1}" title="{name} -> Фото №{i} (Кликни, чтобы глянуть фулл)"'
+		if lang=='jp':return f'alt="{name} -> 写真第{i+1}枚" title="{name} -> 写真第{i}枚（クリックして完全版を見る）"'
+	if phlist:
+		lnth=len(phlist)
+		if lang=='en':title=f'Masahiko AMANO -> Photos from {name}'
+		elif lang=='ru':title=f'Масахико АМАНО -> Фотографии от {name}'
+		else:title=f'天人楽彦 -> {name}の写真'
+	else:
+		link='albums/'+link
+		if lang=='en':title=f'Masahiko AMANO -> Album «{name}»'
+		elif lang=='ru':title=f'Масахико АМАНО -> Альбом «{name}»'
+		else:title=f'天人楽彦 -> アルバム「{name}」'
 	data=(
 f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
 	<meta charset="UTF-8">
 	<title>{title}</title>
-	<link rel="shortcut icon" href="../../files/images/icon.png" type="image/png">
-	<link rel="stylesheet" href="../../files/style/album.css">
+	<link rel="shortcut icon" href="{"../"*bool(phlist)}../../files/images/icon.png" type="image/png">
+	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/album.css">
 </head>
 <body>
 	<header>{name}</header>'''
 )
-	for i in range(1,lnth+1):
+	for i in range(lnth):
+		if phlist:
+			link=dirname(phlist[i]).replace('../../images/','')
+			ph=basename(phlist[i])
+		else:ph=str(i+1).rjust(3,"0")+'.jpg'
 		data+=(
-f'<div class="photo"><a class="link" href="../../files/images/albums/{link}/{str(i).rjust(3,"0")}.jpg" target="_blank"><img src="../../files/images/albums/{link}/preview/{str(i).rjust(3,"0")}.jpg" {alt_title()}><ul class="exif">'
+f'<div class="photo"><a class="link" href="{"../"*bool(phlist)}../../files/images/{link}/{ph}" target="_blank"><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}><ul class="exif">'
 )
-		info=exif(f'../../images/albums/{link}/{str(i).rjust(3,"0")}.jpg')
+		info=exif(f'../../images/{link}/{ph}')
 		for tag in info:
 			if lang=='ru':
 				if tag=='Camera':data+=f'<li><div class="tag">Камера</div><div class="value">{info[tag]}</div></li>'
@@ -63,7 +75,10 @@ f'<div class="photo"><a class="link" href="../../files/images/albums/{link}/{str
 </body>
 </html>'''
 )
-	with open(f'../../../{lang}/albums/{link}.html','w',encoding='utf-8')as out:out.write(data)
+	if phlist:
+		with open(f'../../../{lang}/photos/date/{name}.html','w',encoding='utf-8')as out:out.write(data)
+	else:
+		with open(f'../../../{lang}/albums/{link}.html','w',encoding='utf-8')as out:out.write(data)
 
 
 if __name__=='__main__':
