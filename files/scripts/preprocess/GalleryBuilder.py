@@ -3,9 +3,9 @@ from os.path import dirname,basename
 
 def build(name,link,lnth,lang,phlist=[]):
 	def alt_title():
-		if lang=='en':return f'alt="{name} -> Photo #{i+1}" title="{name} -> Photo #{i} (Click to view fullsized)"'
-		if lang=='ru':return f'alt="{name} -> Фото №{i+1}" title="{name} -> Фото №{i} (Кликни, чтобы глянуть фулл)"'
-		if lang=='jp':return f'alt="{name} -> 写真第{i+1}枚" title="{name} -> 写真第{i}枚（クリックして完全版を見る）"'
+		if lang=='en':return f'alt="{name} -> Photo #{i+1}" title="{name} -> Photo #{i+1} (Click to view fullsized)"'
+		if lang=='ru':return f'alt="{name} -> Фото №{i+1}" title="{name} -> Фото №{i+1} (Кликни, чтобы глянуть фулл)"'
+		if lang=='jp':return f'alt="{name} -> 写真第{i+1}枚" title="{name} -> 写真第{i+1}枚（クリックして完全版を見る）"'
 	if phlist:
 		lnth=len(phlist)
 		if lang=='en':title=f'Masahiko AMANO -> Photos from {name}'
