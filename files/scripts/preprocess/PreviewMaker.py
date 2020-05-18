@@ -7,10 +7,10 @@ def make_previews(path):
 	path=dirname(path)
 	if not access(path+'/preview',F_OK):mkdir(path+'/preview')
 	for file in listdir(path):
-		if file[-4:]=='.jpg':
+		if file[-4:] in ('.jpg','.png') and file[:5]!='cover':
 			pic=Image.open(f'{path}/{file}')
 			win,hin=pic.size
-			if win>1000 and hin>1000:
+			if win>1000 or hin>1000:
 				if win>=hin:
 					wout=1000
 					hout=1000*hin//win
@@ -22,6 +22,11 @@ def make_previews(path):
 				print(f'File: {path}/{file}')
 				print(f'Input size:  {win}x{hin} px')
 				print(f'Output size: {wout}x{hout} px')
+			else:
+				pic.save(f'{path}/preview/{file}')
+				print()
+				print(f'File: {path}/{file}')
+				print('No changes.')
 
 if __name__=='__main__':
 	print('=== PreviewMaker ===\n © Masahiko AMANO a.k.a. H1K0, 2020')
