@@ -1,7 +1,7 @@
 from EXIFer import exif
 from PreviewMaker import make_previews
 from GalleryBuilder import build
-from os import listdir
+from os import listdir,rename
 from os.path import isdir,dirname
 
 def scan(path):
@@ -11,6 +11,9 @@ def scan(path):
 		if item!='preview' and isdir(path+item):
 			scan(path+item)
 		elif item[-4:]=='.jpg' and item!='cover.jpg':
+			if item[0]=='_':
+				rename(path+item,path+'I'+item[1:])
+				item='I'+item[1:]
 			dt=exif(path+item)['DateTime']
 			if not any([i[1]==dt for i in scandata]):scandata.append([path+item,dt])
 
@@ -55,7 +58,7 @@ if __name__=='__main__':
 		else:
 			ul[year]={}
 			ul[year][month]=[day]
-	out=''
+	out=f'{" "*4}<ul class="section dates">\n'
 	for year in list(ul.keys())[::-1]:
 		out+=f'{" "*6}<li class="year">\n{" "*8}<h3 class="year-value" onclick="view(\'{year}\')">{year}</h3>\n{" "*8}<ul class="months" id="{year}">\n'
 		for month in list(ul[year].keys())[::-1]:
@@ -64,6 +67,6 @@ if __name__=='__main__':
 				out+=f'{" "*14}<li class="day"><a href="photos/date/{year}-{month}-{day}" target="_blank"><h3 class="day-value">{day}</h3></a></li>\n'
 			out+=f'{" "*12}</ul>\n{" "*10}</li>\n'
 		out+=f'{" "*8}</ul>\n{" "*6}</li>\n'
-	with open('out.html','w',encoding='utf-8')as html:html.write(out)
+	with open('section dates.html','w',encoding='utf-8')as html:html.write(out+f'{" "*4}</ul>')
 	print('Completed.')
 	input()

@@ -7,7 +7,7 @@ def make_previews(path):
 	path=dirname(path)
 	if not access(path+'/preview',F_OK):mkdir(path+'/preview')
 	for file in listdir(path):
-		if file[-4:] in ('.jpg','.png') and file[:5]!='cover':
+		if file[-4:] in ('.jpg','.png') and file[:5]!='cover' and not access(f'{path}/preview/{file}',F_OK):
 			pic=Image.open(f'{path}/{file}')
 			win,hin=pic.size
 			if win>1000 or hin>1000:
