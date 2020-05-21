@@ -1,4 +1,5 @@
 from EXIFer import exif
+from PreviewMaker import make_previews
 from os.path import dirname,basename
 
 def build(name,link,lnth,lang,phlist=[]):
@@ -98,6 +99,7 @@ if __name__=='__main__':
 				build(en_name,link,lnth,'en')
 				build(ru_name,link,lnth,'ru')
 				build(jp_name,link,lnth,'jp')
+				make_previews(f'../../images/albums/{link}')
 			except Exception as e:print(e)
 			else:print(f'{en_name}: SUCCESS')
 		else:
@@ -112,5 +114,6 @@ if __name__=='__main__':
 					build(album["name_en"],album["link"],album["lnth"],'en')
 					build(album["name_ru"],album["link"],album["lnth"],'ru')
 					build(album["name_jp"],album["link"],album["lnth"],'jp')
+					make_previews(f'../../images/albums/{album["link"]}')
 				except Exception as e:print(e)
 				else:print(f'{album["name_en"]}: SUCCESS')
