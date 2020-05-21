@@ -2,6 +2,8 @@ from PIL import Image
 from os import listdir,access,F_OK,mkdir
 from os.path import dirname
 
+MAXRES=500
+
 def make_previews(path):
 	if path[-1]not in('/','\\'):path+='/'
 	path=dirname(path)
@@ -10,13 +12,13 @@ def make_previews(path):
 		if file[-4:] in ('.jpg','.png') and file[:5]!='cover' and not access(f'{path}/preview/{file}',F_OK):
 			pic=Image.open(f'{path}/{file}')
 			win,hin=pic.size
-			if win>1000 or hin>1000:
+			if win>MAXRES or hin>MAXRES:
 				if win>=hin:
-					wout=1000
-					hout=1000*hin//win
+					wout=MAXRES
+					hout=MAXRES*hin//win
 				else:
-					wout=1000*win//hin
-					hout=1000
+					wout=MAXRES*win//hin
+					hout=MAXRES
 				pic.resize((wout,hout)).save(f'{path}/preview/{file}')
 				print()
 				print(f'File: {path}/{file}')
