@@ -24,7 +24,7 @@ f'''<!DOCTYPE html>
 	<meta charset="UTF-8">
 	<title>{title}</title>
 	<link rel="shortcut icon" href="{"../"*bool(phlist)}../../files/images/icon.png" type="image/png">
-	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/album.css">
+	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/gallery.css">
 </head>
 <body>
 	<header>{name}</header>
