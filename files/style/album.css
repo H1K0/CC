@@ -1,6 +1,6 @@
 body{
-	display: flex;
-	flex-direction: row;
+	margin: 0;
+	padding: 0;
 	background-color: #111;
 	font-family: "Comic Sans MS";
 }
@@ -14,25 +14,37 @@ body{
 ::-webkit-scrollbar{width: 20px}
 header{
 	position: fixed;
-	margin-top: 2.5vh;
+	margin-bottom: 15vh;
+	padding: 5vh 0;
 	width: 100%;
 	color: white;
 	font-size: 5vh;
 	text-shadow: 0 0 10px white;
 	text-align: center;
+	background-color: #111;
+	box-shadow: 0 2vh 2vh #060606;
 	cursor: default;
+	z-index: 2;
+}
+.gallery{
+	margin: 0;
+	padding: 16vh 0;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	list-style: none;
 }
 .photo{
-	/*margin: 0 10vw;*/
 	position: relative;
-	padding: 0 5vw;
-	margin-top: 15vh;
-	height: 75vh;
+	margin-top: 10vh;
+	z-index: 1;
 }
 .photo img{
 	display: block;
 	position: relative;
-	height: 100%;
+	max-width: 80vw;
+	max-height: 42vh;
 	border: 5px solid #888;
 	box-sizing: border-box;
 	box-shadow: 0 0 25px black;
@@ -40,15 +52,19 @@ header{
 .photo a{text-decoration: none}
 .exif{
 	position: absolute;
-	top: calc(50% - 24vh);
-	left: calc(50% - 34vh);
+	/*top: calc(50% - 20vh);
+	left: calc(50% - 35vh);
 	width: 70vh;
-	height: 44vh;
-	padding: 2vh;
+	height: 40vh;*/
+	top: calc(1vh + 5px);
+	left: calc(1vw + 5px);
+	bottom: calc(1vh + 5px);
+	right: calc(1vw + 5px);
+	padding: 2%;
 	box-sizing: border-box;
 	display: none;
 	color: #eee;
-	font-size: 3.25vh;
+	font-size: calc(1vw + 4px);
 	background-color: rgba(0,0,0,.75);
 	border-radius: 1vw;
 	box-shadow: 0 0 2vh #111;

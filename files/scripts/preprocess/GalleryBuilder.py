@@ -26,7 +26,8 @@ f'''<!DOCTYPE html>
 	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/album.css">
 </head>
 <body>
-	<header>{name}</header>\n'''
+	<header>{name}</header>
+	<ul class="gallery">\n'''
 )
 	for i in range(lnth):
 		if phlist:
@@ -34,7 +35,7 @@ f'''<!DOCTYPE html>
 			ph=basename(phlist[i])
 		else:ph=str(i+1).rjust(3,"0")+'.jpg'
 		data+=(
-f'<div class="photo" id="{i+1}"><a class="link" href="{"../"*bool(phlist)}../../files/images/{link}/{ph}" target="_blank"><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}><ul class="exif">'
+f'<li class="photo" id="{i+1}"><a class="link" href="{"../"*bool(phlist)}../../files/images/{link}/{ph}" target="_blank"><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}><ul class="exif">'
 )
 		info=exif(f'../../images/{link}/{ph}')
 		for tag in info:
@@ -55,8 +56,8 @@ f'<div class="photo" id="{i+1}"><a class="link" href="{"../"*bool(phlist)}../../
 				elif tag=='Focal Length':data+=f'<li><div class="tag">焦点距離</div><div class="value">{info[tag]}</div></li>'
 				else:data+=f'<li><div class="tag">{tag}</div><div class="value">{info[tag]}</div></li>'
 			else:data+=f'<li><div class="tag">{tag}</div><div class="value">{info[tag]}</div></li>'
-		data+='</ul></a></div>\n'
-	data+=('''
+		data+='</ul></a></li>\n'
+	data+=('''</ul>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
