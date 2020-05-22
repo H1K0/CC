@@ -39,55 +39,74 @@ header{
 	position: relative;
 	margin-top: 10vh;
 	z-index: 1;
+	cursor: pointer;
 }
 .photo img{
 	display: block;
-	position: relative;
-	height: 42vh;
-	max-width: 90vw;
+	max-height: 42vh;
+	max-width: 84vw;
 	border: 5px solid #888;
 	box-sizing: border-box;
 	box-shadow: 0 0 25px black;
 }
 .photo a{text-decoration: none}
-.exif{
-	position: absolute;
-	/*top: calc(50% - 20vh);
-	left: calc(50% - 35vh);
-	width: 70vh;
-	height: 40vh;*/
-	top: calc(1vh + 5px);
-	left: calc(1vw + 5px);
-	bottom: calc(1vh + 5px);
-	right: calc(1vw + 5px);
-	padding: 2%;
-	box-sizing: border-box;
-	display: none;
-	color: #eee;
-	font-size: calc(1vw + 4px);
-	background-color: rgba(0,0,0,.75);
-	border-radius: 1vw;
-	box-shadow: 0 0 2vh #111;
+.fulls{
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
 	list-style: none;
+}
+.full{
+	display: none;
+	position: absolute;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 2vh 1vw;
+	background-color: #111;
+	z-index: 3;
+}
+.full img{
+	display: block;
+	max-height: 80vh;
+	max-width: 80vw;
+	margin: 0 1vw;
+	border: 5px solid #888;
+	box-sizing: border-box;
+	box-shadow: 0 0 25px black;
+}
+.exif{
+	max-width: 80vw;
+	min-width: 33vw;
+	margin: 2vh 0;
+	padding: 1.5%;
+	box-sizing: border-box;
+	color: #eee;
+	font-size: 2.5vh;
+	background-color: rgba(0,0,0,.75);
+	border-radius: 10px;
+	box-shadow: 0 0 2vh #111;
+	overflow: hidden;
 	transition: .25s;
 }
-.exif:hover{
-	background-color: rgba(0,0,0,.9);
+.exif:hover{background-color: rgba(0,0,0,.9)}
+.exif table{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
 }
-.link:hover .exif{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.exif td{
+	padding: .8vh 0;
+	border-bottom: 1px solid #bbb;
 }
-.exif li{
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: .8vh;
-	border-bottom: .1vh solid #bbb;
-}
-.exif li:last-child{
-	border-bottom: 0;
-}
+.exif tr:last-child td{border-bottom: 0}
 .tag{
 	font-weight: bold;
+	width: 40%;
 }
+.value{text-indent: .5vw}

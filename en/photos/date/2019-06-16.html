@@ -9,9 +9,15 @@
 <body>
 	<header>2019-06-16</header>
 	<ul class="gallery">
-<li class="photo" id="1"><a class="link" href="../../../files/images/photos/2019-06-16 15-16-25.jpg" target="_blank"><img src="../../../files/images/photos/preview/2019-06-16 15-16-25.jpg" alt="2019-06-16 -> Photo #1" title="2019-06-16 -> Photo #1 (Click to view fullsized)"><ul class="exif"><li><div class="tag">Camera</div><div class="value">Redmi 4X</div></li><li><div class="tag">DateTime</div><div class="value">2019-06-16 15:16:31</div></li><li><div class="tag">Shutter Speed</div><div class="value">1/2400 s</div></li><li><div class="tag">Aperture</div><div class="value">f/2</div></li><li><div class="tag">ISO</div><div class="value">102</div></li><li><div class="tag">Focal Length</div><div class="value">4.1 mm</div></li></ul></a></li>
-<li class="photo" id="2"><a class="link" href="../../../files/images/photos/2019-06-16 15-16-36.jpg" target="_blank"><img src="../../../files/images/photos/preview/2019-06-16 15-16-36.jpg" alt="2019-06-16 -> Photo #2" title="2019-06-16 -> Photo #2 (Click to view fullsized)"><ul class="exif"><li><div class="tag">Camera</div><div class="value">Redmi 4X</div></li><li><div class="tag">DateTime</div><div class="value">2019-06-16 15:16:35</div></li><li><div class="tag">Shutter Speed</div><div class="value">1/1600 s</div></li><li><div class="tag">Aperture</div><div class="value">f/2</div></li><li><div class="tag">ISO</div><div class="value">100</div></li><li><div class="tag">Focal Length</div><div class="value">4.1 mm</div></li></ul></a></li>
+<li class="photo" onclick="showfull(0)"><img src="../../../files/images/photos/preview/2019-06-16 15-16-25.jpg" alt="2019-06-16 -> Photo #1" title="2019-06-16 -> Photo #1 (Click to view fullsized)"></li>
+<li class="photo" onclick="showfull(1)"><img src="../../../files/images/photos/preview/2019-06-16 15-16-36.jpg" alt="2019-06-16 -> Photo #2" title="2019-06-16 -> Photo #2 (Click to view fullsized)"></li>
 </ul>
+<ul class="fulls">
+<li class="full" onclick="hidefull(0)"><img src="../../../files/images/photos/2019-06-16 15-16-25.jpg" alt="2019-06-16 15-16-25.jpg"><div class="exif"><table><tr><td class="tag">Camera</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">DateTime</td><td class="value">2019-06-16 15:16:31</td></tr><tr><td class="tag">Shutter Speed</td><td class="value">1/2400 s</td></tr><tr><td class="tag">Aperture</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">102</td></tr><tr><td class="tag">Focal Length</td><td class="value">4.1 mm</td></tr></table></div></li>
+<li class="full" onclick="hidefull(1)"><img src="../../../files/images/photos/2019-06-16 15-16-36.jpg" alt="2019-06-16 15-16-36.jpg"><div class="exif"><table><tr><td class="tag">Camera</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">DateTime</td><td class="value">2019-06-16 15:16:35</td></tr><tr><td class="tag">Shutter Speed</td><td class="value">1/1600 s</td></tr><tr><td class="tag">Aperture</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">Focal Length</td><td class="value">4.1 mm</td></tr></table></div></li>
+</ul>
+<script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
