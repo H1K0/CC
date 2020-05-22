@@ -9,15 +9,14 @@
 <body>
 	<header>2020-02-20</header>
 	<ul class="gallery">
-<li class="photo" onclick="showfull(0)"><img src="../../../files/images/albums/golden-february/preview/022.jpg" alt="2020-02-20 -> 写真第1枚" title="2020-02-20 -> 写真第1枚（クリックして完全版を見る）"></li>
-<li class="photo" onclick="showfull(1)"><img src="../../../files/images/albums/golden-february/preview/023.jpg" alt="2020-02-20 -> 写真第2枚" title="2020-02-20 -> 写真第2枚（クリックして完全版を見る）"></li>
-</ul>
-<ul class="fulls">
-<li class="full" onclick="hidefull(0)"><img src="../../../files/images/albums/golden-february/022.jpg" alt="022.jpg"><div class="exif"><table><tr><td class="tag">カメラ</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">レンズ</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">日付時刻</td><td class="value">2020-02-20 14:45:31</td></tr><tr><td class="tag">シャッター速度</td><td class="value">1/60 s</td></tr><tr><td class="tag">開口</td><td class="value">f/16</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">焦点距離</td><td class="value">50 mm</td></tr></table></div></li>
-<li class="full" onclick="hidefull(1)"><img src="../../../files/images/albums/golden-february/023.jpg" alt="023.jpg"><div class="exif"><table><tr><td class="tag">カメラ</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">レンズ</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">日付時刻</td><td class="value">2020-02-20 14:46:24</td></tr><tr><td class="tag">シャッター速度</td><td class="value">1/640 s</td></tr><tr><td class="tag">開口</td><td class="value">f/8</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">焦点距離</td><td class="value">26 mm</td></tr></table></div></li>
+<li class="photo" onclick='showfull();document.getElementsByClassName("full")[0].innerHTML=`<img src="../../../files/images/albums/golden-february/022.jpg" alt="022.jpg"><div class="exif"><table><tr><td class="tag">カメラ</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">レンズ</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">日付時刻</td><td class="value">2020-02-20 14:45:31</td></tr><tr><td class="tag">シャッター速度</td><td class="value">1/60 s</td></tr><tr><td class="tag">開口</td><td class="value">f/16</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">焦点距離</td><td class="value">50 mm</td></tr></table></div></div>
+`'><img src="../../../files/images/albums/golden-february/preview/022.jpg" alt="2020-02-20 -> 写真第1枚" title="2020-02-20 -> 写真第1枚（クリックして完全版を見る）"></li>
+<li class="photo" onclick='showfull();document.getElementsByClassName("full")[0].innerHTML=`<img src="../../../files/images/albums/golden-february/023.jpg" alt="023.jpg"><div class="exif"><table><tr><td class="tag">カメラ</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">レンズ</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">日付時刻</td><td class="value">2020-02-20 14:46:24</td></tr><tr><td class="tag">シャッター速度</td><td class="value">1/640 s</td></tr><tr><td class="tag">開口</td><td class="value">f/8</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">焦点距離</td><td class="value">26 mm</td></tr></table></div></div>
+`'><img src="../../../files/images/albums/golden-february/preview/023.jpg" alt="2020-02-20 -> 写真第2枚" title="2020-02-20 -> 写真第2枚（クリックして完全版を見る）"></li>
 </ul>
 <script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>
 
+    <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

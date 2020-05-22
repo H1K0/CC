@@ -30,40 +30,39 @@ f'''<!DOCTYPE html>
 	<header>{name}</header>
 	<ul class="gallery">\n'''
 )
-	fulls='<ul class="fulls">\n'
 	for i in range(lnth):
 		if phlist:
 			link=dirname(phlist[i]).replace('../../images/','')
 			ph=basename(phlist[i])
 		else:ph=str(i+1).rjust(3,"0")+'.jpg'
-		data+=(
-f'<li class="photo" onclick="showfull({i})"><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
-)
-		fulls+=f'<li class="full" onclick="hidefull({i})"><img src="{"../"*bool(phlist)}../../files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
+		full=f'<img src="{"../"*bool(phlist)}../../files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
 		info=exif(f'../../images/{link}/{ph}')
 		for tag in info:
-			fulls+='<tr>'
+			full+='<tr>'
 			if lang=='ru':
-				if tag=='Camera':fulls+=f'<td class="tag">Камера</td><td class="value">{info[tag]}</td>'
-				elif tag=='Lens':fulls+=f'<td class="tag">Объектив</td><td class="value">{info[tag]}</td>'
-				elif tag=='DateTime':fulls+=f'<td class="tag">Дата и время</td><td class="value">{info[tag]}</td>'
-				elif tag=='Shutter Speed':fulls+=f'<td class="tag">Выдержка</td><td class="value">{info[tag].replace("s","сек")}</td>'
-				elif tag=='Aperture':fulls+=f'<td class="tag">Диафрагма</td><td class="value">{info[tag]}</td>'
-				elif tag=='Focal Length':fulls+=f'<td class="tag">Фокусное расстояние</td><td class="value">{info[tag]}</td>'
-				else:fulls+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
+				if tag=='Camera':full+=f'<td class="tag">Камера</td><td class="value">{info[tag]}</td>'
+				elif tag=='Lens':full+=f'<td class="tag">Объектив</td><td class="value">{info[tag]}</td>'
+				elif tag=='DateTime':full+=f'<td class="tag">Дата и время</td><td class="value">{info[tag]}</td>'
+				elif tag=='Shutter Speed':full+=f'<td class="tag">Выдержка</td><td class="value">{info[tag].replace("s","сек")}</td>'
+				elif tag=='Aperture':full+=f'<td class="tag">Диафрагма</td><td class="value">{info[tag]}</td>'
+				elif tag=='Focal Length':full+=f'<td class="tag">Фокусное расстояние</td><td class="value">{info[tag]}</td>'
+				else:full+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
 			elif lang=='jp':
-				if tag=='Camera':fulls+=f'<td class="tag">カメラ</td><td class="value">{info[tag]}</td>'
-				elif tag=='Lens':fulls+=f'<td class="tag">レンズ</td><td class="value">{info[tag]}</td>'
-				elif tag=='DateTime':fulls+=f'<td class="tag">日付時刻</td><td class="value">{info[tag]}</td>'
-				elif tag=='Shutter Speed':fulls+=f'<td class="tag">シャッター速度</td><td class="value">{info[tag]}</td>'
-				elif tag=='Aperture':fulls+=f'<td class="tag">開口</td><td class="value">{info[tag]}</td>'
-				elif tag=='Focal Length':fulls+=f'<td class="tag">焦点距離</td><td class="value">{info[tag]}</td>'
-				else:fulls+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
-			else:fulls+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
-			fulls+='</tr>'
-		fulls+='</table></div></li>\n'
-	fulls+='</ul>\n'
-	data+='</ul>\n'+fulls+f'<script type="text/javascript" src="{"../"*bool(phlist)}../../files/scripts/switch_view.js"></script>\n'+('''
+				if tag=='Camera':full+=f'<td class="tag">カメラ</td><td class="value">{info[tag]}</td>'
+				elif tag=='Lens':full+=f'<td class="tag">レンズ</td><td class="value">{info[tag]}</td>'
+				elif tag=='DateTime':full+=f'<td class="tag">日付時刻</td><td class="value">{info[tag]}</td>'
+				elif tag=='Shutter Speed':full+=f'<td class="tag">シャッター速度</td><td class="value">{info[tag]}</td>'
+				elif tag=='Aperture':full+=f'<td class="tag">開口</td><td class="value">{info[tag]}</td>'
+				elif tag=='Focal Length':full+=f'<td class="tag">焦点距離</td><td class="value">{info[tag]}</td>'
+				else:full+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
+			else:full+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
+			full+='</tr>'
+		full+='</table></div></div>\n'
+		data+=(
+f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
+)
+	data+='</ul>\n'+f'<script type="text/javascript" src="{"../"*bool(phlist)}../../files/scripts/switch_view.js"></script>\n'+('''
+    <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

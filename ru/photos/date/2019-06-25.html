@@ -9,15 +9,14 @@
 <body>
 	<header>2019-06-25</header>
 	<ul class="gallery">
-<li class="photo" onclick="showfull(0)"><img src="../../../files/images/photos/preview/2019-06-25 09-11-00_1573456823731.jpg" alt="2019-06-25 -> Фото №1" title="2019-06-25 -> Фото №1 (Кликни, чтобы глянуть фулл)"></li>
-<li class="photo" onclick="showfull(1)"><img src="../../../files/images/photos/preview/2019-06-25 09-11-17.jpg" alt="2019-06-25 -> Фото №2" title="2019-06-25 -> Фото №2 (Кликни, чтобы глянуть фулл)"></li>
-</ul>
-<ul class="fulls">
-<li class="full" onclick="hidefull(0)"><img src="../../../files/images/photos/2019-06-25 09-11-00_1573456823731.jpg" alt="2019-06-25 09-11-00_1573456823731.jpg"><div class="exif"><table><tr><td class="tag">Камера</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">Дата и время</td><td class="value">2019-06-25 09:10:59</td></tr><tr><td class="tag">Выдержка</td><td class="value">1/2300 сек</td></tr><tr><td class="tag">Диафрагма</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">Фокусное расстояние</td><td class="value">4.1 mm</td></tr></table></div></li>
-<li class="full" onclick="hidefull(1)"><img src="../../../files/images/photos/2019-06-25 09-11-17.jpg" alt="2019-06-25 09-11-17.jpg"><div class="exif"><table><tr><td class="tag">Камера</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">Дата и время</td><td class="value">2019-06-25 09:11:17</td></tr><tr><td class="tag">Выдержка</td><td class="value">1/1600 сек</td></tr><tr><td class="tag">Диафрагма</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">Фокусное расстояние</td><td class="value">4.1 mm</td></tr></table></div></li>
+<li class="photo" onclick='showfull();document.getElementsByClassName("full")[0].innerHTML=`<img src="../../../files/images/photos/2019-06-25 09-11-00_1573456823731.jpg" alt="2019-06-25 09-11-00_1573456823731.jpg"><div class="exif"><table><tr><td class="tag">Камера</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">Дата и время</td><td class="value">2019-06-25 09:10:59</td></tr><tr><td class="tag">Выдержка</td><td class="value">1/2300 сек</td></tr><tr><td class="tag">Диафрагма</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">Фокусное расстояние</td><td class="value">4.1 mm</td></tr></table></div></div>
+`'><img src="../../../files/images/photos/preview/2019-06-25 09-11-00_1573456823731.jpg" alt="2019-06-25 -> Фото №1" title="2019-06-25 -> Фото №1 (Кликни, чтобы глянуть фулл)"></li>
+<li class="photo" onclick='showfull();document.getElementsByClassName("full")[0].innerHTML=`<img src="../../../files/images/photos/2019-06-25 09-11-17.jpg" alt="2019-06-25 09-11-17.jpg"><div class="exif"><table><tr><td class="tag">Камера</td><td class="value">Redmi 4X</td></tr><tr><td class="tag">Дата и время</td><td class="value">2019-06-25 09:11:17</td></tr><tr><td class="tag">Выдержка</td><td class="value">1/1600 сек</td></tr><tr><td class="tag">Диафрагма</td><td class="value">f/2</td></tr><tr><td class="tag">ISO</td><td class="value">100</td></tr><tr><td class="tag">Фокусное расстояние</td><td class="value">4.1 mm</td></tr></table></div></div>
+`'><img src="../../../files/images/photos/preview/2019-06-25 09-11-17.jpg" alt="2019-06-25 -> Фото №2" title="2019-06-25 -> Фото №2 (Кликни, чтобы глянуть фулл)"></li>
 </ul>
 <script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>
 
+    <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

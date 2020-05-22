@@ -9,13 +9,12 @@
 <body>
 	<header>2019-08-13</header>
 	<ul class="gallery">
-<li class="photo" onclick="showfull(0)"><img src="../../../files/images/albums/dolzhanka-2019/preview/018.jpg" alt="2019-08-13 -> Photo #1" title="2019-08-13 -> Photo #1 (Click to view fullsized)"></li>
-</ul>
-<ul class="fulls">
-<li class="full" onclick="hidefull(0)"><img src="../../../files/images/albums/dolzhanka-2019/018.jpg" alt="018.jpg"><div class="exif"><table><tr><td class="tag">Camera</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">Lens</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">DateTime</td><td class="value">2019-08-13 22:39:03</td></tr><tr><td class="tag">Shutter Speed</td><td class="value">1/8 s</td></tr><tr><td class="tag">Aperture</td><td class="value">f/5.6</td></tr><tr><td class="tag">ISO</td><td class="value">6400</td></tr><tr><td class="tag">Focal Length</td><td class="value">22 mm</td></tr></table></div></li>
+<li class="photo" onclick='showfull();document.getElementsByClassName("full")[0].innerHTML=`<img src="../../../files/images/albums/dolzhanka-2019/018.jpg" alt="018.jpg"><div class="exif"><table><tr><td class="tag">Camera</td><td class="value">Canon EOS 550D</td></tr><tr><td class="tag">Lens</td><td class="value">EF-S18-135mm f/3.5-5.6 IS</td></tr><tr><td class="tag">DateTime</td><td class="value">2019-08-13 22:39:03</td></tr><tr><td class="tag">Shutter Speed</td><td class="value">1/8 s</td></tr><tr><td class="tag">Aperture</td><td class="value">f/5.6</td></tr><tr><td class="tag">ISO</td><td class="value">6400</td></tr><tr><td class="tag">Focal Length</td><td class="value">22 mm</td></tr></table></div></div>
+`'><img src="../../../files/images/albums/dolzhanka-2019/preview/018.jpg" alt="2019-08-13 -> Photo #1" title="2019-08-13 -> Photo #1 (Click to view fullsized)"></li>
 </ul>
 <script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>
 
+    <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
