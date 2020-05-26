@@ -169,7 +169,7 @@ footer h3{
 }
 .flags-box{
 	margin: 10px auto;
-	width: 10vw;
+	width: 160px;
 	min-height: 16px;
 	display: flex;
 	justify-content: space-around;
@@ -179,6 +179,7 @@ footer h3{
 	width: 22px;
 	height: 16px;
 	background-image: url(../images/flags.png);
+	border-radius: 5px;
 }
 .en{background-position: -88px -352px}
 .ru{background-position: -30px -294px}
