@@ -1,0 +1,42 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+html:lang(en),html:lang(ru){font-family: "Comic Sans MS"}
+html:lang(jp){font-family: "HGMaruGothicMPRO"}
+html:lang(en) q,html:lang(ru) q{quotes: "«" "»"}
+html:lang(jp) q{quotes: "「" "」"}
+html:lang(jp) q[type="strong"]{quotes: "『" "』"}
+html:lang(jp) q[type="double"]{quotes: "《" "》"}
+::-webkit-scrollbar-track {background-color:rgba(0,0,0,.9)}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: url(../images/texture.jpg);
+	background-size: cover;
+}
+::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.6)}
+::-webkit-scrollbar{width: 20px}
+.block{
+	margin: 2% auto;
+	padding: 5%;
+	box-sizing: border-box;
+	width: 90%;
+	height: 22.5%;
+	border-radius: 5px;
+	background: rgba(0,0,0,.6);
+	box-shadow: 0 0 20px rgba(0,0,0,.7);
+	color: white;
+}
+.section{
+	padding: 1%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 400px;
+	overflow-y: scroll;
+	border: 1px solid white;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	list-style: none;
+}
+.section::-webkit-scrollbar{width: 15px}
