@@ -120,23 +120,34 @@ p a{color: #aaf}
 p a:hover{color: #ccf}
 .network-links-box{
 	margin-top: 50px;
+	height: 108px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	flex-wrap: nowrap;
 	list-style: none;
 }
 .network-link{
+	display: block;
+	font-size: 0;
 	width: 100px;
 	height: 100px;
-	box-sizing: border-box;
-	border-radius: 100px;
+	border-radius: 50px;
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 20px black;
-	transition: .2s;
+	transition: .4s;
 }
-.network-link:hover{border: 4px solid #ccc}
+.network-link[title="VK"]{background-image: url(../images/vk.png)}
+.network-link[title="Newgrounds"]{background-image: url(../images/ng.png)}
+.network-link[title="YouTube"]{background-image: url(../images/yt.png)}
+.network-link[title="Instagram"]{background-image: url(../images/ig.png)}
+.network-link[title="GitHub"]{background-image: url(../images/gt.png)}
+.network-link:hover{
+	border: 4px solid #ccc;
+	border-radius: 36px;
+}
 footer{
 	position: fixed;
 	bottom: 0;
@@ -148,7 +159,7 @@ footer{
 	box-shadow: 0 0 20px rgba(0,0,0,.8);
 	flex-shrink: 0;
 	cursor: default;
-	transition: .1s;
+	transition: .5s;
 	z-index: 54;
 }
 footer:hover{background-color: rgba(0,0,0,.8)}
