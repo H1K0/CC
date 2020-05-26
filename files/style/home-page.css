@@ -121,6 +121,7 @@ p a:hover{color: #ccf}
 .network-links-box{
 	margin-top: 50px;
 	height: 108px;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
