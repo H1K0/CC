@@ -46,7 +46,7 @@ nav{
 	font-weight: bold;
 	font-size: 3vh;
 	text-transform: uppercase;
-	transition: .1s;
+	transition: .5s;
 	z-index: 54;
 }
 nav:hover{background-color: rgba(0,0,0,.8)}
