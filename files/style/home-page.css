@@ -48,7 +48,7 @@ nav{
 	transition: .5s;
 	z-index: 54;
 }
-nav:hover{background-color: rgba(0,0,0,.8)}
+nav:hover{background-color: rgba(0,0,0,.9)}
 .navbar{
 	position: relative;
 	margin: auto;
@@ -162,7 +162,7 @@ footer{
 	transition: .5s;
 	z-index: 54;
 }
-footer:hover{background-color: rgba(0,0,0,.8)}
+footer:hover{background-color: rgba(0,0,0,.9)}
 footer h3{
 	margin: 10px auto;
 	font-size: 3vh;
