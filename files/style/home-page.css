@@ -1,7 +1,6 @@
 body{
 	padding-bottom: 10vh;
-	background: url(../images/texture.jpg);
-	background-size: contain;
+	background: url(../images/cubes.jpg);
 }
 header{
 	position: relative;

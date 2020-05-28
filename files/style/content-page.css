@@ -3,18 +3,7 @@ html,body{
 	padding: 0;
 	font-family: "Comic Sans MS";
 }
-body{
-	background-image: url(../images/texture.jpg);
-	background-size: contain;
-}
-::-webkit-scrollbar-track {background-color:rgba(0,0,0,.9)}
-::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: url(../images/texture.jpg);
-	background-size: cover;
-}
-::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.6)}
-::-webkit-scrollbar{width: 20px}
+body{background-image: url(../images/triangles.jpg)}
 header,footer{
 	margin: 50px auto;
 	width: 66%;
