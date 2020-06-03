@@ -16,16 +16,16 @@ def build(name,link,lnth,lang,phlist=[]):
 		link='albums/'+link
 		if lang=='en':title=f'Masahiko AMANO -> Album «{name}»'
 		elif lang=='ru':title=f'Масахико АМАНО -> Альбом «{name}»'
-		else:title=f'天人楽彦 -> アルバム「{name}」'
+		else:title=f'天人楽彦 -> 「{name}」写真アルバム'
 	data=(
 f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
 	<meta charset="UTF-8">
 	<title>{title}</title>
-	<link rel="shortcut icon" href="{"../"*bool(phlist)}../../files/images/icon.png" type="image/png">
-	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/general.css" type="text/css">
-	<link rel="stylesheet" href="{"../"*bool(phlist)}../../files/style/gallery.css" type="text/css">
+	<link rel="shortcut icon" href="../../../files/images/icon.png" type="image/png">
+	<link rel="stylesheet" href="../../../files/style/general.css" type="text/css">
+	<link rel="stylesheet" href="../../../files/style/gallery.css" type="text/css">
 </head>
 <body>
 	<header>{name}</header>
@@ -36,7 +36,7 @@ f'''<!DOCTYPE html>
 			link=dirname(phlist[i]).replace('../../images/','')
 			ph=basename(phlist[i])
 		else:ph=str(i+1).rjust(3,"0")+'.jpg'
-		full=f'<img src="{"../"*bool(phlist)}../../files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
+		full=f'<img src="../../../files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
 		info=exif(f'../../images/{link}/{ph}')
 		for tag in info:
 			full+='<tr>'
@@ -60,9 +60,9 @@ f'''<!DOCTYPE html>
 			full+='</tr>'
 		full+='</table></div></div>\n'
 		data+=(
-f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="{"../"*bool(phlist)}../../files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
+f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="../../../files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
 )
-	data+='</ul>\n'+f'<script type="text/javascript" src="{"../"*bool(phlist)}../../files/scripts/switch_view.js"></script>\n'+('''
+	data+='</ul>\n'+f'<script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>\n'+('''
     <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -85,7 +85,7 @@ f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")
 	if phlist:
 		with open(f'../../../{lang}/photos/date/{name}.html','w',encoding='utf-8')as out:out.write(data)
 	else:
-		with open(f'../../../{lang}/{link}.html','w',encoding='utf-8')as out:out.write(data)
+		with open(f'../../../{lang}/photos/{link}.html','w',encoding='utf-8')as out:out.write(data)
 
 
 if __name__=='__main__':
