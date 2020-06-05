@@ -85,6 +85,33 @@ p{
 .description ol{
 	margin-left: 1vw;
 }
+.lyrics table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.lyrics tr{
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+.lyrics tr:hover{
+	background-color: #eef;
+	border: 2px solid #bbc;
+}
+.lyrics th,td{
+	width: 36%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.lyrics th{
+	text-align: left;
+}
+.lyrics h2{padding-left: 1vw}
+.romaji{
+	margin-left: -30pt;
+	font-size: .9rem;
+	font-style: italic;
+}
 footer{
 	font-size: 16pt;
 	font-weight: bold;
