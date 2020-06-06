@@ -107,8 +107,9 @@ p{
 	text-align: left;
 }
 .lyrics h2{padding-left: 1vw}
-.romaji{
-	margin-left: -30pt;
+.lyrics .original{padding-right: 36pt}
+.lyrics .romaji{
+	margin-left: -36pt;
 	font-size: .9rem;
 	font-style: italic;
 }
