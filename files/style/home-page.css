@@ -64,12 +64,12 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	text-shadow: 0 0 5px white;
 	font-size: 5vh;
 }
-.navbar:hover .navlist{display: block}
+.navbar:hover .navlist{height: 50vh}
 .navlist{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: none;
+	height: 0;
 	position: absolute;
 	width: 100%;
 	box-sizing: border-box;
@@ -80,12 +80,20 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	box-shadow: 0 0 20px black;
 	transition: inherit;
 	overflow: hidden;
+	transition: .5s;
 }
 .navlist-item{
+	position: relative;
+	height: 10vh;
 	transition: 0.25s;
 	border-bottom: 1px solid #555;
 }
 .navlist-item a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
