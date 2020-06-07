@@ -9,14 +9,14 @@ def build(name,link,lnth,lang,phlist=[]):
 		if lang=='jp':return f'alt="{name} -> 写真第{i+1}枚" title="{name} -> 写真第{i+1}枚（クリックして完全版を見る）"'
 	if phlist:
 		lnth=len(phlist)
-		if lang=='en':title=f'Masahiko AMANO -> Photos from {name}'
-		elif lang=='ru':title=f'Масахико АМАНО -> Фотографии от {name}'
-		else:title=f'天人楽彦 -> {name}の写真'
+		if lang=='en':title=f'Masahiko AMANO -&gt; Photos from {name}'
+		elif lang=='ru':title=f'Масахико АМАНО -&gt; Фотографии от {name}'
+		else:title=f'天人楽彦 -&gt; {name}の写真'
 	else:
 		link='albums/'+link
-		if lang=='en':title=f'Masahiko AMANO -> Album «{name}»'
-		elif lang=='ru':title=f'Масахико АМАНО -> Альбом «{name}»'
-		else:title=f'天人楽彦 -> 「{name}」写真アルバム'
+		if lang=='en':title=f'Masahiko AMANO -&gt; Album «{name}»'
+		elif lang=='ru':title=f'Масахико АМАНО -&gt; Альбом «{name}»'
+		else:title=f'天人楽彦 -&gt; 「{name}」写真アルバム'
 	data=(
 f'''<!DOCTYPE html>
 <html lang="{lang}">
