@@ -44,6 +44,7 @@ f'''<!DOCTYPE html>
 				if tag=='Camera':full+=f'<td class="tag">Камера</td><td class="value">{info[tag]}</td>'
 				elif tag=='Lens':full+=f'<td class="tag">Объектив</td><td class="value">{info[tag]}</td>'
 				elif tag=='DateTime':full+=f'<td class="tag">Дата и время</td><td class="value">{info[tag]}</td>'
+				elif tag=='Resolution':full+=f'<td class="tag">Разрешение</td><td class="value">{info[tag]}</td>'
 				elif tag=='Shutter Speed':full+=f'<td class="tag">Выдержка</td><td class="value">{info[tag].replace("s","сек")}</td>'
 				elif tag=='Aperture':full+=f'<td class="tag">Диафрагма</td><td class="value">{info[tag]}</td>'
 				elif tag=='Focal Length':full+=f'<td class="tag">Фокусное расстояние</td><td class="value">{info[tag]}</td>'
@@ -52,6 +53,7 @@ f'''<!DOCTYPE html>
 				if tag=='Camera':full+=f'<td class="tag">カメラ</td><td class="value">{info[tag]}</td>'
 				elif tag=='Lens':full+=f'<td class="tag">レンズ</td><td class="value">{info[tag]}</td>'
 				elif tag=='DateTime':full+=f'<td class="tag">日付時刻</td><td class="value">{info[tag]}</td>'
+				elif tag=='Resolution':full+=f'<td class="tag">解像度</td><td class="value">{info[tag]}</td>'
 				elif tag=='Shutter Speed':full+=f'<td class="tag">シャッター速度</td><td class="value">{info[tag]}</td>'
 				elif tag=='Aperture':full+=f'<td class="tag">開口</td><td class="value">{info[tag]}</td>'
 				elif tag=='Focal Length':full+=f'<td class="tag">焦点距離</td><td class="value">{info[tag]}</td>'
@@ -83,7 +85,7 @@ f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")
 </html>'''
 )
 	if phlist:
-		with open(f'../../../{lang}/photos/date/{name}.html','w',encoding='utf-8')as out:out.write(data)
+		with open(f'../../../{lang}/photos/dates/{name}.html','w',encoding='utf-8')as out:out.write(data)
 	else:
 		with open(f'../../../{lang}/photos/{link}.html','w',encoding='utf-8')as out:out.write(data)
 

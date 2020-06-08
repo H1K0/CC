@@ -1,5 +1,6 @@
 from os import listdir
 from exifread import process_file as load
+from PIL import Image
 
 def exif(image):
 	with open(image,'rb')as img:data=load(img)
@@ -16,7 +17,9 @@ def exif(image):
 		try:
 			if   tag=='Image Model':out['Camera']=str(data[tag])
 			elif tag=='EXIF LensModel':out['Lens']=str(data[tag])
-			elif tag=='EXIF DateTimeOriginal':out['DateTime']=str(data[tag]).replace(':','-',2)
+			elif tag=='EXIF DateTimeOriginal':
+				out['DateTime']=str(data[tag]).replace(':','-',2)
+				out['Resolution']='{0} x {1} px'.format(*Image.open(image).size)
 			elif tag=='EXIF ExposureTime':out['Shutter Speed']=f'{data[tag]} s'
 			elif tag=='EXIF FNumber':
 				if '/' in str(data[tag]):out['Aperture']=f'f/{round(int(str(data[tag]).split("/")[0])/int(str(data[tag]).split("/")[1]),1)}'
@@ -35,4 +38,9 @@ if __name__=='__main__':
 		try:data=exif(f'../../images/albums/golden-february/{img}')
 		except Exception as e:print(e)
 		for tag in data:print(f'{tag}: {data[tag]}')
+	print('And the full EXIF:')
+	with open('../../images/photos/IMG_3073.jpg','rb')as file:data=load(file)
+	for tag in data:
+		if tag!='JPEGThumbnail':
+			print(f'{tag}: {data[tag]}')
 	input()
