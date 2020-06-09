@@ -7,35 +7,35 @@
 		"name_jp":"春雪"
 	},
 	{
-		"link":"golden-february",
+		"link":"golden_february",
 		"lnth":79,
 		"name_en":"GOLDEN FEBRUARY",
 		"name_ru":"GOLDEN FEBRUARY",
 		"name_jp":"GOLDEN FEBRUARY"
 	},
 	{
-		"link":"n1k0-zabiff",
+		"link":"n1k0_zabiff",
 		"lnth":42,
 		"name_en":"N1K0-zabiff",
 		"name_ru":"Н1К0-забив",
 		"name_jp":"N1K0-zabiff"
 	},
 	{
-		"link":"rostankino-winter-2020",
+		"link":"rostankino-winter_2020",
 		"lnth":25,
 		"name_en":"Rostankino: Winter 2020",
 		"name_ru":"Ростанкино: Зима 2020",
 		"name_jp":"ロスタンキノ：2020冬"
 	},
 	{
-		"link":"teply-stan-butovo-winter-2020",
+		"link":"teply_stan_butovo-winter_2020",
 		"lnth":56,
 		"name_en":"Teply Stan — Butovo: Winter 2020",
 		"name_ru":"Теплый Стан — Бутово: Зима 2020",
 		"name_jp":"テョプリー・スタン→ブトヲ：2020冬"
 	},
 	{
-		"link":"kosino-vykhino-winter-2020",
+		"link":"kosino_vykhino-winter_2020",
 		"lnth":93,
 		"name_en":"Kosino — Vykhino: Winter 2020",
 		"name_ru":"Косино — Выхино: Зима 2020",
@@ -49,14 +49,14 @@
 		"name_jp":"KUTUZevent"
 	},
 	{
-		"link":"shaitan-fotozabiff-2020",
+		"link":"shaitan_fotozabiff-2020",
 		"lnth":34,
 		"name_en":"Shaitan-fotozabiff 2020",
 		"name_ru":"Шайтан-фотозабив 2020",
 		"name_jp":"Shaitan-fotozabiff 2020"
 	},
 	{
-		"link":"from-park-kultury-to-ploschad-gagarina",
+		"link":"from_park_kultury-to_ploschad_gagarina",
 		"lnth":42,
 		"name_en":"From Park Kultury to Ploschad Gagarina",
 		"name_ru":"От Парка Культуры до Площади Гагарина",
@@ -84,21 +84,21 @@
 		"name_jp":"ドルジャンカ：2019"
 	},
 	{
-		"link":"kosino-vykhino-summer-2019",
+		"link":"kosino_vykhino-summer_2019",
 		"lnth":10,
 		"name_en":"Kosino — Vykhino: Summer 2019",
 		"name_ru":"Косино — Выхино: Лето 2019",
 		"name_jp":"コシノ→ヰヒノ：2019夏"
 	},
 	{
-		"link":"kosino-vykhino-spring-2019",
+		"link":"kosino_vykhino-spring_2019",
 		"lnth":13,
 		"name_en":"Kosino — Vykhino: Spring 2019",
 		"name_ru":"Косино — Выхино: Весна 2019",
 		"name_jp":"コシノ→ヰヒノ：2019春"
 	},
 	{
-		"link":"garden-ring-spring-2019",
+		"link":"garden_ring-spring_2019",
 		"lnth":10,
 		"name_en":"Garden Ring: Spring 2019",
 		"name_ru":"Садовое Кольцо: Весна 2019",
@@ -112,21 +112,21 @@
 		"name_jp":"HOMESTANKINO：2019"
 	},
 	{
-		"link":"moscow-belt-2019",
+		"link":"moscow_belt-2019",
 		"lnth":70,
 		"name_en":"Moscow Belt: 2019",
 		"name_ru":"Московский Пояс: 2019",
 		"name_jp":"モスクワ帯：2019"
 	},
 	{
-		"link":"moscow-embankments-winter-2019",
+		"link":"moscow_embankments-winter_2019",
 		"lnth":20,
 		"name_en":"Moscow Embankments: Winter 2019",
 		"name_ru":"Московские Набережные: Зима 2019",
 		"name_jp":"モスクワ川岸：2019冬"
 	},
 	{
-		"link":"garden-ring-winter-2019",
+		"link":"garden_ring-winter_2019",
 		"lnth":10,
 		"name_en":"Garden Ring: Winter 2019",
 		"name_ru":"Садовое Кольцо: Зима 2019",
