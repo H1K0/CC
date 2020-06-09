@@ -1,5 +1,6 @@
 from EXIFer import exif
 from PreviewMaker import make_previews
+from os import access,F_OK,mkdir
 from os.path import dirname,basename
 
 def build(name,link,lnth,lang,phlist=[]):
@@ -23,9 +24,9 @@ f'''<!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<title>{title}</title>
-	<link rel="shortcut icon" href="../../../files/images/icon.png" type="image/png">
-	<link rel="stylesheet" href="../../../files/style/general.css" type="text/css">
-	<link rel="stylesheet" href="../../../files/style/gallery.css" type="text/css">
+	<link rel="shortcut icon" href="/files/images/icon.png" type="image/png">
+	<link rel="stylesheet" href="/files/style/general.css" type="text/css">
+	<link rel="stylesheet" href="/files/style/gallery.css" type="text/css">
 </head>
 <body>
 	<header>{name}</header>
@@ -36,7 +37,7 @@ f'''<!DOCTYPE html>
 			link=dirname(phlist[i]).replace('../../images/','')
 			ph=basename(phlist[i])
 		else:ph=str(i+1).rjust(3,"0")+'.jpg'
-		full=f'<img src="../../../files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
+		full=f'<img src="/files/images/{link}/{ph}" alt="{ph}"><div class="exif"><table>'
 		info=exif(f'../../images/{link}/{ph}')
 		for tag in info:
 			full+='<tr>'
@@ -62,9 +63,9 @@ f'''<!DOCTYPE html>
 			full+='</tr>'
 		full+='</table></div></div>\n'
 		data+=(
-f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="../../../files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
+f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="/files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
 )
-	data+='</ul>\n'+f'<script type="text/javascript" src="../../../files/scripts/switch_view.js"></script>\n'+('''
+	data+='</ul>\n'+f'<script type="text/javascript" src="/files/scripts/switch_view.js"></script>\n'+('''
     <div class="full" onclick="hidefull()"></div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
