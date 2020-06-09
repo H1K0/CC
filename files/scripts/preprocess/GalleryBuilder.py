@@ -86,7 +86,9 @@ f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")
 </html>'''
 )
 	if phlist:
-		with open(f'../../../{lang}/photos/dates/{name}.html','w',encoding='utf-8')as out:out.write(data)
+		if not access(f'../../../{lang}/photos/dates/{name[:4]}',F_OK):mkdir(f'../../../{lang}/photos/dates/{name[:4]}')
+		if not access(f'../../../{lang}/photos/dates/{name[:4]}/{name[5:7]}',F_OK):mkdir(f'../../../{lang}/photos/dates/{name[:4]}/{name[5:7]}')
+		with open(f'../../../{lang}/photos/dates/{name[:4]}/{name[5:7]}/{name[-2:]}.html','w',encoding='utf-8')as out:out.write(data)
 	else:
 		with open(f'../../../{lang}/photos/{link}.html','w',encoding='utf-8')as out:out.write(data)
 

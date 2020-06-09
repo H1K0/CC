@@ -64,7 +64,7 @@ if __name__=='__main__':
 		for month in list(ul[year].keys())[::-1]:
 			out+=f'{" "*10}<li class="month">\n{" "*12}<h3 class="month-value" onclick="view(\'{year}-{month}\')">{month}</h3>\n{" "*12}<ul class="days" id="{year}-{month}">\n'
 			for day in ul[year][month][::-1]:
-				out+=f'{" "*14}<li class="day"><a href="photos/date/{year}-{month}-{day}" target="_blank"><h3 class="day-value">{day}</h3></a></li>\n'
+				out+=f'{" "*14}<li class="day"><a href="photos/dates/{year}/{month}/{day}" target="_blank"><h3 class="day-value">{day}</h3></a></li>\n'
 			out+=f'{" "*12}</ul>\n{" "*10}</li>\n'
 		out+=f'{" "*8}</ul>\n{" "*6}</li>\n'
 	with open('section dates.html','w',encoding='utf-8')as html:html.write(out+f'{" "*4}</ul>')
