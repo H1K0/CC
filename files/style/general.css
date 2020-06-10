@@ -2,8 +2,16 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
-html:lang(en),html:lang(ru){font-family: "Comic Sans MS"}
-html:lang(jp){font-family: "HGMaruGothicMPRO"}
+@font-face{
+	font-family: ComicS;
+	src: url(../fonts/comic.ttf);
+}
+@font-face{
+	font-family: MARUH1K0;
+	src: url(../fonts/maru.ttf);
+}
+html:lang(en),html:lang(ru){font-family: ComicS}
+html:lang(jp){font-family: MARUH1K0}
 html:lang(en) q,html:lang(ru) q{quotes: "«" "»"}
 html:lang(jp) q{quotes: "「" "」"}
 html:lang(jp) q[type="strong"]{quotes: "『" "』"}
