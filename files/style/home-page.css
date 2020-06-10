@@ -179,11 +179,11 @@ footer{
 }
 footer:hover{background-color: rgba(0,0,0,.9)}
 footer h3{
-	margin: 10px auto;
+	margin: 8px auto;
 	font-size: 3vh;
 }
 .flags-box{
-	margin: 10px auto;
+	margin: 8px auto;
 	width: 160px;
 	min-height: 16px;
 	display: flex;
@@ -191,11 +191,11 @@ footer h3{
 }
 .flag{
 	display: block;
-	width: 22px;
-	height: 16px;
+	width: 30px;
+	height: 22px;
 	background-image: url(../images/flags.png);
 	border-radius: 5px;
 }
-.en{background-position: -88px -352px}
-.ru{background-position: -30px -294px}
-.jp{background-position: -88px -178px}
+.en{background-position: 36px -136px}
+.ru{background-position: -132px -556px}
+.jp{background-position: -6px -346px}
