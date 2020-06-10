@@ -14,3 +14,7 @@ Allow: /files/scripts/*.js
 User-agent: GoogleBot
 Allow: /files/style/*
 Allow: /files/scripts/*.js
+
+
+Sitemap: http://h1k0.fun/sitemap.xml
+Host: http://h1k0.fun
