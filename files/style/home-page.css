@@ -68,6 +68,7 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	font-size: 5vh;
 }
 .navbar:active{
+	text-shadow: 0 0 10px white;
 	font-size: 6.6vh;
 }
 .navbar:hover .navlist{height: 50vh}
@@ -88,6 +89,7 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	overflow: hidden;
 	transition: .5s;
 }
+.navlist:hover{background: rgb(216,216,216)}
 .navlist-item{
 	position: relative;
 	height: 10vh;
@@ -113,7 +115,6 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	font-size: 4vh;
 }
 .navlist-item:active{
-	text-shadow: 0 0 5px white;
 	font-size: 6vh;
 }
 h1{
