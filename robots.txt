@@ -4,10 +4,10 @@ Disallow: /files/json/*
 Disallow: /files/style/*
 Disallow: /files/scripts/*
 Disallow: /404.html
-Disallow: /feed.rss
+Disallow: /turbo.rss
 
 User-agent: Yandex
-Allow: /feed.rss
+Allow: /turbo.rss
 Allow: /files/style/*
 Allow: /files/scripts/*.js
 
