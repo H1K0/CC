@@ -64,6 +64,9 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	text-shadow: 0 0 5px white;
 	font-size: 5vh;
 }
+.navbar:active{
+	font-size: 6.6vh;
+}
 .navbar:hover .navlist{height: 50vh}
 .navlist{
 	margin: 0;
@@ -105,6 +108,10 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 .navlist-item:hover{
 	background: rgba(0,0,0,.25);
 	font-size: 4vh;
+}
+.navlist-item:active{
+	text-shadow: 0 0 5px white;
+	font-size: 6vh;
 }
 h1{
 	text-align: center;
