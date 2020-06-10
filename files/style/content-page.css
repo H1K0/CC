@@ -77,10 +77,6 @@ p{
 .content-html:hover{
 	height: 80vh;
 }
-.stronger{
-	font-size: 16pt;
-	font-weight: bold;
-}
 .description p{text-indent: 1vw}
 .description ol{
 	margin-left: 1vw;
