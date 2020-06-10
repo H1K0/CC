@@ -19,18 +19,21 @@ header{
 	top: calc(15vw - .5vw);
 	left: 5vw;
 	width: 88vw;
-	filter: drop-shadow(.6vw .6vw .25vw #444);
+	filter: drop-shadow(.6vw .6vw .3vw #333);
 	animation: float 3s linear infinite;
 }
 @keyframes float{
 	0%{
 		top: calc(15vw - .5vw);
+		filter: drop-shadow(.6vw .6vw .3vw #333);
 	}
 	50%{
 		top: calc(15vw + .5vw);
+		filter: drop-shadow(.1vw .1vw .05vw #000);
 	}
 	100%{
 		top: calc(15vw - .5vw);
+		filter: drop-shadow(.6vw .6vw .3vw #333);
 	}
 }
 nav{
