@@ -10,11 +10,11 @@ header,footer{
 	border-right-width: 25px;
 	background-color: white;
 	box-shadow: 0 0 20px black;
-	font-size: 36pt;
+	font-size: 44pt;
 	text-shadow: 2px 2px 2.5px #777;
 	text-align: center;
 }
-header strong{font-size: 44pt}
+header strong{font-size: 52pt}
 .container{
 	margin: 5%;
 	padding: 2% 5%;
@@ -36,6 +36,7 @@ h3{
 	font-size: 20pt;
 }
 p{
+	font-size: 1.4vw;
 	margin: 1vh 0;
 	text-align: justify;
 }
@@ -110,6 +111,6 @@ p{
 	font-style: italic;
 }
 footer{
-	font-size: 16pt;
+	font-size: 24pt;
 	font-weight: bold;
 }
