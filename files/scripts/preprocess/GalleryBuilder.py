@@ -24,7 +24,7 @@ f'''<!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<title>{title}</title>
-	<link rel="shortcut icon" href="/files/images/icon.png" type="image/png">
+	<link rel="shortcut icon" href="/favicon.png" type="image/png">
 	<link rel="stylesheet" href="/files/style/general.css" type="text/css">
 	<link rel="stylesheet" href="/files/style/gallery.css" type="text/css">
 </head>
