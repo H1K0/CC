@@ -18,20 +18,7 @@ def build(name,link,lnth,lang,phlist=[]):
 		if lang=='en':title=f'Album «{name}» | Masahiko AMANO a.k.a. H1K0'
 		elif lang=='ru':title=f'Альбом «{name}» | Масахико АМАНО a.k.a. H1K0'
 		else:title=f'「{name}」写真アルバム | 天人楽彦 a.k.a. H1K0'
-	data=(
-f'''<!DOCTYPE html>
-<html lang="{lang}">
-<head>
-	<meta charset="UTF-8">
-	<title>{title}</title>
-	<link rel="shortcut icon" href="/favicon.png" type="image/png">
-	<link rel="stylesheet" href="/files/style/general.css" type="text/css">
-	<link rel="stylesheet" href="/files/style/gallery.css" type="text/css">
-</head>
-<body>
-	<header>{name}</header>
-	<ul class="gallery">\n'''
-)
+	gallery=''
 	for i in range(lnth):
 		if phlist:
 			link=dirname(phlist[i]).replace('../../images/','')
@@ -61,13 +48,27 @@ f'''<!DOCTYPE html>
 				else:full+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
 			else:full+=f'<td class="tag">{tag}</td><td class="value">{info[tag]}</td>'
 			full+='</tr>'
-		full+='</table></div></div>\n'
-		data+=(
-f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="/files/images/{link}/preview/{ph}" {alt_title()}></li>\n'
-)
-	data+='</ul>\n'+f'<script type="text/javascript" src="/files/scripts/switch_view.js"></script>\n'+('''
+		full+='</table></div></div>'
+		gallery+=f'<li class="photo" onclick=\'showfull();document.getElementsByClassName("full")[0].innerHTML=`{full}`\'><img src="/files/images/{link}/preview/{ph}" {alt_title()}></li>'
+
+	data=(
+f'''<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+	<meta charset="UTF-8">
+	<title>{title}</title>
+	<link rel="shortcut icon" href="/favicon.png" type="image/png">
+	<link rel="stylesheet" href="/files/style/general.css" type="text/css">
+	<link rel="stylesheet" href="/files/style/gallery.css" type="text/css">
+</head>
+<body>
+	<header>{name}</header>
+	<ul class="gallery">
+	{gallery}
+	</ul>
+	<script type="text/javascript" src="/files/scripts/switch_view.js"></script>
     <div class="full" onclick="hidefull()"></div>
-    <!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->''''''
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
