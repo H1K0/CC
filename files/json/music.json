@@ -3,6 +3,7 @@
 		"ia-shinkuri":{
 			"Name":"新年天国・クリスマス魔法",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/939741",
+			"Feat":"VOCALOID IA",
 			"Composition":"H1K0",
 			"Arrangement":"H1K0",
 			"Programming":"H1K0",
@@ -37,11 +38,13 @@
 		},
 		"snowflakes":{
 			"Name":"SNOWFLAKES",
+			"Feat":"ZingerS",
 			"ExternalLink":"http://zingers.xyz/en/music/singles/snowflakes",
 			"CoverLink":"http://zingers.xyz/files/images/covers/preview/snowflakes.png"
 		},
 		"stay_alive":{
 			"Name":"Stay Alive",
+			"Feat":"ZingerS",
 			"ExternalLink":"http://zingers.xyz/en/music/singles/stay_alive",
 			"CoverLink":"http://zingers.xyz/files/images/covers/preview/stay_alive.png"
 		},
@@ -58,12 +61,13 @@
 			"BPM":122,
 			"PubDate":"2020-03-08",
 			"Description":{
-				"en":"<p>Why not to make some songs <em>without any synths</em> and collect an album?</p><p>So yeah, this song has no synth sound. I just recorded my guitar and vocals on my phone and made it sound better using FL. Kinda <strong>LIVe</strong> music.</p><p>And as you can see, this is a cover song for <strong><q>Behind Blue Eyes</q></strong> and my first experience in <u>rock-ballad</u> genre.</p><p>Another interesting story about this track. Originally I planned to record vocals as usual: verse to verse and only one time for chorus. But... I decided to try to record it in one breath. So I put on my headphones, enabled recording on my phone and sang the song from start to end. So in fact I recorded the vocals just in ~4 minutes. The second voice was made just by tuning the first.</p>"
+				"en":"<p>Why not to make some songs <em>without any synths</em> and collect an album?</p><p>So yeah, this song has no synth sound. I just recorded my guitar and vocals on my phone and made it sound better using FL. Kinda <strong>LIVe</strong> music.</p><p>And as you can see, this is a cover song for <strong>«Behind Blue Eyes»</strong> and my first experience in <u>rock-ballad</u> genre.</p><p>Another interesting story about this track. Originally I planned to record vocals as usual: verse to verse and only one time for chorus. But... I decided to try to record it in one breath. So I put on my headphones, enabled recording on my phone and sang the song from start to end. So in fact I recorded the vocals just in ~4 minutes. The second voice was made just by tuning the first.</p>"
 			}
 		},
 		"ia-iroseka":{
 			"Name":"色付く世界",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/908754",
+			"Feat":"VOCALOID IA",
 			"Composition":"H1K0",
 			"Arrangement":"H1K0",
 			"Programming":"H1K0",
@@ -415,8 +419,9 @@
 			}
 		},
 		"the_town_under_the_foot_remix":{
-			"Name":"The Town Under The Foot [H1K0 & TDexe Remix]",
+			"Name":"The Town Under The Foot",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/740993",
+			"Feat":"TDexe",
 			"Original":"Oxxxymiron",
 			"Order":"TDexe",
 			"Arrangement":"H1K0 & TDexe",
