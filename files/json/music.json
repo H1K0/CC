@@ -1,5 +1,5 @@
 {
-	"List":{
+	"Tracks":{
 		"ia-shinkuri":{
 			"Name":"新年天国・クリスマス魔法",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/939741",
@@ -48,6 +48,7 @@
 		"behind_blue_cover":{
 			"Name":"Behind Blue COVER",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/916229",
+			"Original":"Limp Bizkit",
 			"Arrangement":"H1K0",
 			"Guitar":"H1K0",
 			"Programming":"H1K0",
@@ -175,7 +176,7 @@
 		"moonlight_densetsu_instrumental_cover":{
 			"Name":"ムーンライト伝説 Instrumental Cover",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/814631",
-			"Composition":"H1K0",
+			"Original":"DALI",
 			"Arrangement":"H1K0",
 			"Programming":"H1K0",
 			"CoverDesign":"H1K0",
@@ -830,7 +831,7 @@
 				"ru":"<p><strong>Sytrus</strong> — мой любимый плагин-генератор, который я юзаю во всех своих треках (просто не могу вспомнить ни одного без него). А иногда на весь трек хватает его одного (ну и FPC на ударке), и именно из таких треков и состоит этот сборник.</p>",
 				"jp":"<p><strong>Sytrus</strong>は、俺の曲に使ってないことのない、俺の一番好きなジェネレータープラグインだ。それに、時々Sytrusだけで充分な場合もあるんで（まあ、ドラム用のFPCを除いてな）、そう言った曲を集めてきた。</p>"
 			},
-			"Contents":[
+			"Tracklist":[
 				"snowflakes",
 				"stay_alive",
 				"toki_2019",
@@ -853,7 +854,7 @@
 				"ru":"<p>Вокалоиды топовые, правда? Особенно мне нравится <strong>IA</strong>-тян, у которой, пожалуй, самый мягкий и естественный голос (я пробовал много других вокалоидов и знаю, что говорю).</p><p>Короче, здесь собраны песенки, которые я запилил для IA-тян.</p>",
 				"jp":"<p>VOCALOIDってスゲーもんだな。特に、ふわふわした自然な声の<strong>IA</strong>ちゃん。なんか一番好きなんだなぁ。</p><p>兎に角、ここに集まった曲は俺が作りIAちゃんが歌った曲。</p>"
 			},
-			"Contents":[
+			"Tracklist":[
 				"ia-shinkuri",
 				"ia-iroseka"
 			]
@@ -864,7 +865,7 @@
 			"Name":"閃光",
 			"CoverDesign":"H1K0",
 			"PubDate":"2018-10-12",
-			"Contents":[
+			"Tracklist":[
 				"senkou",
 				"misakis_theme",
 				"birthday"
