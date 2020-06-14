@@ -1,17 +1,12 @@
-html,body{
-	margin: 0;
-	padding: 0;
-}
-@font-face{
-	font-family: ComicS;
-	src: url(../fonts/comic.ttf);
-}
 @font-face{
 	font-family: MARUH1K0;
 	src: url(../fonts/maru.ttf);
 }
-:lang(en),:lang(ru){font-family: ComicS}
-:lang(jp){font-family: MARUH1K0}
+html,body{
+	margin: 0;
+	padding: 0;
+	font-family: MARUH1K0;
+}
 html:lang(en) q,html:lang(ru) q{quotes: "«" "»"}
 html:lang(jp) q{quotes: "「" "」"}
 html:lang(jp) q[type="strong"]{quotes: "『" "』"}
