@@ -34,6 +34,11 @@ switch={
 		"ru":"Заказчик",
 		"jp":"注文"
 	},
+	"ScriptWriter":{
+		"en":"Scriptwriter",
+		"ru":"Автор текста",
+		"jp":"脚本家"
+	},
 	"Composition":{
 		"en":"Composition",
 		"ru":"Композиция",
@@ -48,6 +53,11 @@ switch={
 		"en":"Guitar",
 		"ru":"Гитара",
 		"jp":"ギター"
+	},
+	"Bayan":{
+		"en":"Bayan",
+		"ru":"Баян",
+		"jp":"バヤン"
 	},
 	"Programming":{
 		"en":"Programming",
@@ -68,6 +78,11 @@ switch={
 		"en":"Vocals",
 		"ru":"Вокал",
 		"jp":"ボーカル"
+	},
+	"Reading":{
+		"en":"Reading",
+		"ru":"Текст читает",
+		"jp":"読み上げ"
 	},
 	"Key":{
 		"en":"Key",

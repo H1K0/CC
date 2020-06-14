@@ -38,6 +38,10 @@ h3{
 	text-align: center;
 	font-size: 19pt;
 }
+h4{
+	padding-left: 25pt;
+	font-size: 17pt;
+}
 p{
 	margin: 0;
 	margin-bottom: 1vh;
@@ -104,6 +108,7 @@ tr:hover{
 	width: 100%;
 	margin-left: 5px;
 }
+.description p{text-indent: 10pt}
 .description ol{
 	margin-left: 1vw;
 }
