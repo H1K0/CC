@@ -288,12 +288,12 @@ def build_page(typ,ID,data,lang):
 			if data[tag][0].isupper():mode='dur'
 			else:mode='moll'
 			info+=f'<tr><td class="tag">{switch[tag][lang]}</td><td>{switch["KeyCode"][data[tag].lower()][lang]}{switch[mode][lang]}</td></tr>'
+	info+='</table>'
 	if 'Description' in data:
-		info+=f'<tr><td class="tag">{switch["Description"][lang]}</td><td class="description">'
+		info+=f'<h3>{switch["Description"][lang]}</h3><div class="description">'
 		if lang in data["Description"]:info+=data["Description"][lang]
 		else:info+=data["Description"]["en"]
-		info+='</td></tr>'
-	info+='</table>'
+		info+='</div>'
 	# Generating tracklist
 	tracklist=''
 	if 'Tracklist' in data:
