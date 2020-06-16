@@ -60,9 +60,6 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	cursor: pointer;
 	transition: .5s;
 }
-.active{
-	text-decoration: underline;
-}
 .navbar:hover{
 	text-shadow: 0 0 5px white;
 	font-size: 5vh;
@@ -104,6 +101,9 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	padding: 3vh 0;
 	text-decoration: none;
 	color: black;
+}
+.active{
+	text-decoration: underline;
 }
 .navlist-item:last-child{border-bottom: 0}
 .navlist-item:hover{
