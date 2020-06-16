@@ -448,8 +448,8 @@ f'''<!DOCTYPE html>
         Creations
         <ul class="navlist">
           <li class="navlist-item active"><a href>Music</a></li>
-          <li class="navlist-item"><a href="photos">Photo</a></li>
-          <li class="navlist-item"><a href="video">Video</a></li>
+          <li class="navlist-item"><a href="photos">Photos</a></li>
+          <li class="navlist-item"><a href="videos">Videos</a></li>
           <li class="navlist-item"><a href="articles">Articles</a></li>
           <li class="navlist-item"><a href="novels">Novels</a></li>
         </ul>
@@ -528,7 +528,7 @@ f'''<!DOCTYPE html>
         <ul class="navlist">
           <li class="navlist-item active"><a href>Музлишко</a></li>
           <li class="navlist-item"><a href="photos">Фотки</a></li>
-          <li class="navlist-item"><a href="video">Видосы</a></li>
+          <li class="navlist-item"><a href="videos">Видосы</a></li>
           <li class="navlist-item"><a href="articles">Статейки</a></li>
           <li class="navlist-item"><a href="novels">Новеллы</a></li>
         </ul>
@@ -607,7 +607,7 @@ f'''<!DOCTYPE html>
         <ul class="navlist">
           <li class="navlist-item active"><a href>音楽</a></li>
           <li class="navlist-item"><a href="photos">写真</a></li>
-          <li class="navlist-item"><a href="video">動画</a></li>
+          <li class="navlist-item"><a href="videos">動画</a></li>
           <li class="navlist-item"><a href="articles">記事</a></li>
           <li class="navlist-item"><a href="novels">小説</a></li>
         </ul>
