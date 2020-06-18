@@ -338,7 +338,7 @@ f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
   <meta charset="UTF-8">
-  <title>{title} | {switch["MyName"][lang]} a.k.a. H1K0</title>
+  <title>{title} | H1K0-CC</title>
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <link rel="stylesheet" href="/files/style/general.css" type="text/css">
   <link rel="stylesheet" href="/files/style/content-page.css" type="text/css">
@@ -430,7 +430,7 @@ f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MUSIC | Masahiko AMANO a.k.a. H1K0</title>
+  <title>MUSIC | H1K0-CC</title>
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <link rel="stylesheet" href="/files/style/general.css" type="text/css">
   <link rel="stylesheet" href="/files/style/home-page.css" type="text/css">
@@ -509,7 +509,7 @@ f'''<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>МУЗЛИШКО | Масахико АМАНО a.k.a. H1K0</title>
+  <title>МУЗЛИШКО | H1K0-CC</title>
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <link rel="stylesheet" href="/files/style/general.css" type="text/css">
   <link rel="stylesheet" href="/files/style/home-page.css" type="text/css">
@@ -588,7 +588,7 @@ f'''<!DOCTYPE html>
 <html lang="jp">
 <head>
   <meta charset="UTF-8">
-  <title>音楽 | 天人楽彦 a.k.a. H1K0</title>
+  <title>音楽 | H1K0-CC</title>
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <link rel="stylesheet" href="/files/style/general.css" type="text/css">
   <link rel="stylesheet" href="/files/style/home-page.css" type="text/css">
