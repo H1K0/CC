@@ -42,7 +42,8 @@ switch={
 	"Composition":{
 		"en":"Composition",
 		"ru":"Композиция",
-		"jp":"作曲"
+		"jp":"作曲",
+		"micro":"composer"
 	},
 	"Arrangement":{
 		"en":"Arrangement",
@@ -72,7 +73,8 @@ switch={
 	"Lyricist":{
 		"en":"Lyrics",
 		"ru":"Текст песенки",
-		"jp":"作詞"
+		"jp":"作詞",
+		"micro":"lyricist"
 	},
 	"CoverDesign":{
 		"en":"Cover design",
@@ -92,7 +94,8 @@ switch={
 	"Key":{
 		"en":"Key",
 		"ru":"Тональность",
-		"jp":"調号"
+		"jp":"調号",
+		"micro":"musicalKey"
 	},
 	"BPM":{
 		"en":"BPM",
@@ -283,23 +286,27 @@ def build_page(typ,ID,data,lang):
 	# Generating header
 	header=''
 	feat=''
-	if 'Feat' in data:feat=f' <i>[feat. {data["Feat"]}]</i>'
-	if lang in ('en','ru'):header=f'{switch[typ][lang]} <h1>«{data["Name"]}{feat}»</h1>'
-	elif lang=='jp':header=f'<strong>「{data["Name"]}{feat}」</strong>{switch[typ][lang]}'
+	if 'Feat' in data:feat=f' <i itemprop="contributor" itemscope itemtype="http://schema.org/Person">[feat. <span itemprop="name">{data["Feat"]}</span>]</i>'
+	if lang in ('en','ru'):header=f'{switch[typ][lang]} <h1>«<span itemprop="name">{data["Name"]}</span>{feat}»</h1>'
+	elif lang=='jp':header=f'<strong>「<span itemprop="name">{data["Name"]}</span>{feat}」</strong>{switch[typ][lang]}'
 	# Generating <audio>
 	audio=''
 	if typ=='Track':
 		audio=(
-	f'''<audio class="content-audio" controls{" loop"*("Loop" in data)}>
+	f'''<audio itemprop="audio" itemscope itemtype="http://schema.org/AudioObject" class="content-audio" controls{" loop"*("Loop" in data)}>
           <source src="/files/audio/mp3/{ID}.mp3" type="audio/mpeg">
+          <link itemprop="url" href="/files/audio/mp3/{ID}.mp3">
           {alt("audio")}
-        </audio><hr>'''
-)
+        </audio><hr>''')
 	# Generating info
 	info='<table>'
 	for tag in data:
 		if tag not in ('Name','ReserveLink','Feat','Key','Description','Tracklist','CoverID','Lyrics','Loop') and (tag!='Key' or lang=='en'):
-			info+=f'<tr><td class="tag">{switch[tag][lang]}</td><td>{data[tag]}'
+			info+=f'<tr'
+			if 'micro' in switch[tag] and tag!='PubDate':info+=f' itemscope itemtype="http://schema.org/Person"><td class="tag">{switch[tag][lang]}</td><td itemprop="name"'
+			elif tag=='PubDate':info+=f'><td class="tag">{switch[tag][lang]}</td><td itemprop="datePublished"'
+			else:info+=f'><td class="tag">{switch[tag][lang]}</td><td'
+			info+=f'>{data[tag]}'
 			if tag=='Key':
 				if data[tag][0].isupper():info+='-dur'
 				else:info+='-moll'
@@ -307,10 +314,10 @@ def build_page(typ,ID,data,lang):
 		elif tag=='Key' and lang!='en':
 			if data[tag][0].isupper():mode='dur'
 			else:mode='moll'
-			info+=f'<tr><td class="tag">{switch[tag][lang]}</td><td>{switch["KeyCode"][data[tag].lower()][lang]}{switch[mode][lang]}</td></tr>'
+			info+=f'<tr itemprop="{switch[tag]["micro"]}" itemscope itemtype="http://schema.org/Text"><td class="tag">{switch[tag][lang]}</td><td itemprop="name">{switch["KeyCode"][data[tag].lower()][lang]}{switch[mode][lang]}</td></tr>'
 	info+='</table>'
 	if 'Description' in data:
-		info+=f'<h3>{switch["Description"][lang]}</h3><div class="description">'
+		info+=f'<h3>{switch["Description"][lang]}</h3><div class="description" itemprop="description">'
 		if lang in data["Description"]:info+=data["Description"][lang]
 		else:info+=data["Description"]["en"]
 		info+='</div>'
@@ -320,18 +327,18 @@ def build_page(typ,ID,data,lang):
 		global json
 		tracklist+=f'<hr><h2>{switch["Tracklist"][lang]}</h2><ol class="tracklist">'
 		for track in data['Tracklist']:
-			tracklist+='<li><a href="'
+			tracklist+='<li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording"><a itemprop="url" href="'
 			if 'ExternalLink' in json['Tracks'][track]:tracklist+=json['Tracks'][track]['ExternalLink']
 			else:tracklist+=f'../tracks/{track}'
-			tracklist+=f'" target="_blank">{json["Tracks"][track]["Name"]}</a></li>'
+			tracklist+=f'" target="_blank"><span itemprop="name">{json["Tracks"][track]["Name"]}</span></a></li>'
 	# Embedding cover
 	if 'CoverID' in data:coverid=data['CoverID']
 	else:coverid=ID
-	cover=f'<hr><a href="/files/images/music/{coverid}.jpg" target="_blank"><img class="content-image" src="/files/images/music/preview/{coverid}.jpg" alt="{alt("img")}" title="{alt("img")}"></a>'
+	cover=f'<hr><a href="/files/images/music/{coverid}.jpg" target="_blank"><img itemprop="image" class="content-image" src="/files/images/music/preview/{coverid}.jpg" alt="{alt("img")}" title="{alt("img")}"></a>'
 	# Generating lyrics
 	lyrics=''
 	if 'Lyrics' in data:
-		lyrics=f'<hr><div class="lyrics"><h2>{switch["Lyrics"][lang]}</h2>'+lyrtable(data['Lyrics'].copy(),lang)+'</div>'
+		lyrics=f'<hr><div class="lyrics" itemprop="lyrics"><h2>{switch["Lyrics"][lang]}</h2>'+lyrtable(data['Lyrics'].copy(),lang)+'</div>'
 	# COMPLETED
 	with open(f'../../../{lang}/music/{typ.lower()}s/{ID}.html','w',encoding='utf-8')as out:out.write(
 f'''<!DOCTYPE html>
@@ -343,7 +350,8 @@ f'''<!DOCTYPE html>
   <link rel="stylesheet" href="/files/style/general.css" type="text/css">
   <link rel="stylesheet" href="/files/style/content-page.css" type="text/css">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Music{"Composition"*(typ=="Track")}{"Playlist"*(typ=="Compil")}{"Album"*(typ=="Album")}">
+  <meta itemprop="creator" content="H1K0">
   <header>{header}</header>
 
   <div class="container">
@@ -358,7 +366,7 @@ f'''<!DOCTYPE html>
   </div>
 
   <footer>
-    © {switch["MyName"][lang]} a.k.a. H1K0, 2020''''''
+    © <span itemprop="copyrightHolder">{switch["MyName"][lang]} a.k.a. H1K0</span>, <span itemprop="copyrightYear">2020</span>''''''
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -376,8 +384,7 @@ f'''<!DOCTYPE html>
     <!-- /Yandex.Metrika counter -->
   </footer>
 </body>
-</html>'''
-)
+</html>''')
 
 
 if __name__=='__main__':
@@ -416,15 +423,15 @@ if __name__=='__main__':
 		else:cover=f'/files/images/music/preview/{track}.jpg'
 		if 'ExternalLink' in json["Tracks"][track]:url=json["Tracks"][track]['ExternalLink']
 		else:url=f'music/tracks/{track}'
-		lst+=f'<li class="track-card" style="background-image: url({cover})"><a href="{url}" target="_blank"><h3>{json["Tracks"][track]["Name"]}</h3>'
-		if 'Feat' in json["Tracks"][track]:lst+=f'<h4>[feat. {json["Tracks"][track]["Feat"]}]</h4>'
-		lst+='</a></li>'
+		lst+=f'<li class="track-card" style="background-image: url({cover})" itemscope itemtype="http://schema.org/MusicRecording"><meta itemprop="creator" content="H1K0"><meta itemprop="image" content="{cover}"><a itemprop="url" href="{url}" target="_blank"><h3 itemprop="name">{json["Tracks"][track]["Name"]}</h3>'
+		if 'Feat' in json["Tracks"][track]:lst+=f'<h4 itemprop="contributor" itemscope itemtype="http://schema.org/Person">[feat. <span itemprop="name">{json["Tracks"][track]["Feat"]}</span>]</h4>'
+		lst+='</a></li>\n'
 	# Generating the list of compils
 	compils=''
-	for compil in json["Compils"]:compils+=f'<li class="track-card" style="background-image: url(/files/images/music/preview/{compil}.jpg)"><a href="music/compils/{compil}" target="_blank"><h3>{json["Compils"][compil]["Name"]}</h3></a></li>'
+	for compil in json["Compils"]:compils+=f'<li class="track-card" style="background-image: url(/files/images/music/preview/{compil}.jpg)" itemscope itemtype="http://schema.org/MusicPlaylist"><meta itemprop="creator" content="H1K0"><a itemprop="url" href="music/compils/{compil}" target="_blank"><h3 itemprop="name">{json["Compils"][compil]["Name"]}</h3></a></li>\n'
 	# Generating the list of albums
 	albums=''
-	for album in json["Albums"]:albums+=f'<li class="track-card" style="background-image: url(/files/images/music/preview/{album}.jpg)"><a href="music/albums/{album}" target="_blank"><h3>{json["Albums"][album]["Name"]}</h3></a></li>'
+	for album in json["Albums"]:albums+=f'<li class="track-card" style="background-image: url(/files/images/music/preview/{album}.jpg)" itemscope itemtype="http://schema.org/MusicAlbum"><meta itemprop="creator" content="H1K0"><a itemprop="url" href="music/albums/{album}" target="_blank"><h3 itemprop="name">{json["Albums"][album]["Name"]}</h3></a></li>\n'
 	with open('../../../en/music.html','w',encoding='utf-8')as file:file.write(
 f'''<!DOCTYPE html>
 <html lang="en">
@@ -481,8 +488,8 @@ f'''<!DOCTYPE html>
   <footer>
     <div class="flags-box">
       <a class="flag en" href title="English"></a>
-      <a class="flag ru" href="../ru/music" title="Русский"></a>
-      <a class="flag jp" href="../jp/music" title="日本語"></a>
+      <a class="flag ru" href="/ru/music" title="Русский"></a>
+      <a class="flag jp" href="/jp/music" title="日本語"></a>
     </div>
     <h3>© Masahiko AMANO a.k.a. H1K0, 2020</h3>
     <!-- Yandex.Metrika counter -->
@@ -559,9 +566,9 @@ f'''<!DOCTYPE html>
 ''''''
   <footer>
     <div class="flags-box">
-      <a class="flag en" href="../en/music" title="English"></a>
+      <a class="flag en" href="/en/music" title="English"></a>
       <a class="flag ru" href title="Русский"></a>
-      <a class="flag jp" href="../jp/music" title="日本語"></a>
+      <a class="flag jp" href="/jp/music" title="日本語"></a>
     </div>
     <h3>© Масахико АМАНО a.k.a. H1K0, 2020</h3>
     <!-- Yandex.Metrika counter -->
@@ -638,8 +645,8 @@ f'''<!DOCTYPE html>
 ''''''
   <footer>
     <div class="flags-box">
-      <a class="flag en" href="../en/music" title="English"></a>
-      <a class="flag ru" href="../ru/music" title="Русский"></a>
+      <a class="flag en" href="/en/music" title="English"></a>
+      <a class="flag ru" href="/ru/music" title="Русский"></a>
       <a class="flag jp" href title="日本語"></a>
     </div>
     <h3>© 天人楽彦 a.k.a. H1K0, 2020</h3>
