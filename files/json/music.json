@@ -1,5 +1,20 @@
 {
 	"Tracks":{
+		"nikoniko":{
+			"Name":"NIKONIKO",
+			"ReserveLink":"https://www.newgrounds.com/audio/listen/943556",
+			"Composition":"H1K0",
+			"Arrangement":"H1K0",
+			"Programming":"H1K0",
+			"CoverDesign":"H1K0",
+			"Key":"Es",
+			"BPM":122,
+			"PubDate":"2020-06-21",
+			"Description":{
+				"en":"<p>Well, this track I started almost a year ago. Exactly on the day we went to Dolzhanka — July 21. And completed in about a week. But still didn't publish. Why? Firstly, I think, cuz I wanted to publish it with a video but didn't have the AfterEffects to make the video.</p><p>However, donmai.</p><p>Btw <em>nikoniko</em> means «shining smile», just like at the cover pic. I tried my best to emphasize this shining with the arps in melodies and basses.</p><p>And yeah, <a href=\"../compils/only_sytrus\" target=\"_blank\">Only Sytrus</a> again. :З</p></div>",
+				"ru":"<p>Вообще, этому треку уже без месяца год. Помню, я его начал как раз в день нашего отъезда в Должанку — 21 июля — и где-то через недельку он был по большому счету уже готов. Но как-то я с ним затянул. Первой причиной, пожалуй, было отсутствие у меня афтерэффекта, поскольку я хотел опубликовать сразу с видосом. Короче говоря, задержка в этот раз вызвана не настойкой, как с <a href=\"arashi\" target=\"_blank\">Араси</a>.</p><p>Впрочем, пофиг.</p><p>Кстати, <em>никонико</em> означает «сияющая улыбка» — примерно как на обложке. Это сияние я как мог подчеркнул скачущими арпеджио и в мелодии, и в басах.</p><p>И да, снова трек из <a href=\"../compils/only_sytrus\" target=\"_blank\">чистого Цитруса</a>. :З</p>"
+			}
+		},
 		"ia-shinkuri":{
 			"Name":"新年天国・クリスマス魔法",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/939741",
@@ -854,6 +869,7 @@
 				"jp":"<p><strong>Sytrus</strong>は、俺の曲に使ってないことのない、俺の一番好きなジェネレータープラグインだ。それに、時々Sytrusだけで充分な場合もあるんで（まあ、ドラム用のFPCを除いてな）、そう言った曲を集めてきた。</p>"
 			},
 			"Tracklist":[
+				"nikoniko",
 				"snowflakes",
 				"stay_alive",
 				"toki_2019",
