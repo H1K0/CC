@@ -191,7 +191,7 @@ footer h3{
 	display: block;
 	width: 30px;
 	height: 22px;
-	background-image: url(../images/flags.png);
+	background-image: url(../images/flags.webp);
 	border-radius: 5px;
 	transition: .2s;
 }
