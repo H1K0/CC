@@ -14,7 +14,7 @@ html:lang(jp) q[type="double"]{quotes: "《" "》"}
 ::-webkit-scrollbar-track {background-color:rgba(0,0,0,.9)}
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background: url(../images/triangles.jpg);
+	background: url(../images/triangles.webp);
 	background-size: cover;
 }
 ::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.6)}
