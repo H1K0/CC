@@ -151,11 +151,11 @@ p a:hover{color: #ccf}
 	box-shadow: 0 0 20px black;
 	transition: .4s;
 }
-.network-link[title="VK"]{background-image: url(../images/vk.png)}
-.network-link[title="Newgrounds"]{background-image: url(../images/ng.png)}
-.network-link[title="YouTube"]{background-image: url(../images/yt.png)}
-.network-link[title="Instagram"]{background-image: url(../images/ig.png)}
-.network-link[title="GitHub"]{background-image: url(../images/gt.png)}
+.network-link[title="VK"]{background-image: url(../images/vk.webp)}
+.network-link[title="Newgrounds"]{background-image: url(../images/ng.webp)}
+.network-link[title="YouTube"]{background-image: url(../images/yt.webp)}
+.network-link[title="Instagram"]{background-image: url(../images/ig.webp)}
+.network-link[title="GitHub"]{background-image: url(../images/gt.webp)}
 .network-link:hover{
 	border: 4px solid #ccc;
 	border-radius: 36px;
