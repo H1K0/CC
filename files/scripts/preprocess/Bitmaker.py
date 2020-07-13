@@ -451,6 +451,7 @@ f'''<!DOCTYPE html>
     <nav>
       <a class="navbar" href="..">Home</a>
       <a class="navbar" href="profile">Profile</a>
+      <a class="navbar" href="hire-me">Hire me</a>
       <div class="navbar active">
         Creations
         <ul class="navlist">
@@ -530,6 +531,7 @@ f'''<!DOCTYPE html>
     <nav>
       <a class="navbar" href=".">Домик</a>
       <a class="navbar" href="profile">Профиль</a>
+      <a class="navbar" href="hire-me">Нанять меня</a>
       <div class="navbar active">
         Шедевры
         <ul class="navlist">
