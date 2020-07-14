@@ -913,6 +913,21 @@
 				"ia-shinkuri",
 				"ia-iroseka"
 			]
+		},
+		"h1k0vers":{
+			"Name":"H1K0VERs",
+			"CoverDesign":"H1K0",
+			"PubDate":"2020-07-14",
+			"Description":{
+				"en":"<p>So, as long as I'm making not only the original stuff, sometimes I also cover others' works. Covering others' tracks is also useful for experiments and practice. Here they are.</p>",
+				"ru":"<p>Ну, не все же пилить оригинальный контент, иногда я могу и кавернуть трек кого-то другого. Особенно полезны каверы в качестве экспериментов и тренировки. Собсна, вот все каверки.</p>",
+				"jp":"<p>ま、新曲ばっかやってらんないし、時々他人の曲をカバーしたくもなる。カバーってさ、実験や練習にはすごく役立つんだよな。そしてこの俺のカバー曲はここに集まってるってことだ。</p>"
+			},
+			"Tracklist":[
+				"the_town_under_the_foot_remix",
+				"behind_blue_cover",
+				"blazing_cover"
+			]
 		}
 	},
 	"Albums":{
