@@ -51,7 +51,6 @@ nav{
 	transition: .5s;
 	z-index: 54;
 }
-nav:hover{background-color: rgba(0,0,0,.9)}
 .navbar{
 	position: relative;
 	margin: auto;
@@ -64,6 +63,7 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	text-shadow: 0 0 5px white;
 	font-size: 5vh;
 }
+nav:hover{background-color: rgba(0,0,0,.9)}
 .navbar:hover .navlist{height: 50vh}
 .navlist{
 	margin: 0;
@@ -178,6 +178,28 @@ footer:hover{background-color: rgba(0,0,0,.9)}
 footer h3{
 	margin: 8px auto;
 	font-size: 3vh;
+}
+@media (orientation: portrait){
+	nav{
+		height: 12vw;
+		font-size: 3vw;
+	}
+	.navbar:hover{
+		font-size: 5vw;
+	}
+	.navbar:hover .navlist{height: 30vh}
+	.navlist{
+		font-size: 3vw;
+	}
+	.navlist-item{
+		height: 6vh;
+	}
+	.navlist-item:hover{
+		font-size: 4vw;
+	}
+	footer h3{
+		font-size: 3vw;
+	}
 }
 .flags-box{
 	margin: 0 auto;
