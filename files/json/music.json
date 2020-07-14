@@ -1,5 +1,21 @@
 {
 	"Tracks":{
+		"blazing_cover":{
+			"Name":"BLAZING COVER",
+			"ReserveLink":"https://www.newgrounds.com/audio/listen/949014",
+			"Vocals":"H1K0",
+			"Programming":"H1K0",
+			"CoverDesign":"H1K0",
+			"Key":"b",
+			"BPM":166,
+			"PubDate":"2020-07-14",
+			"CoverID":"h1k0vers",
+			"Description":{
+				"en":"<p>The first time I heard this song was the last year's June and since then wanted to cover it. So here it is.</p><p>I recorded this on the night of July 9-10 and the remaining 4 days spent on mixing and mastering. It's a whole story with the process: I've come up with so many new useful mixing/mastering methods. Anyway, it was a really awesome experience.</p><p>And yeah, it seems to be my <em>second</em> cover (<a href=\"behind_blue_cover\" title=\"Behind Blue COVER\">this's the first</a>).</p><p><em>Recorded on my <del>shaitan-mobila</del> Xiaomi Redmi 8.</em> Yeah, perhaps you can't believe but you believe.</p>",
+				"ru":"<p>Честно говоря, кавернуть эту песенку я захотел еще тогда, когда на нее наткнулся — то бишь где-то в июне прошлого года. Собсна, вот и каверок.</p><p>Голос записал ночью с 9 на 10 июля, а оставшиеся четыре дня сидел-пердел над сводкой и мастерингом. С ними вообще целая история: столько всяких новых полезных приемчиков разработал. Короче, офигенный опыт.</p><p>И да, это мой <em>второй</em> кавер палучаеца (<a href=\"behind_blue_cover\" target=\"_blank\" title=\"Behind Blue COVER\">вот первый</a>).</p><p><em>Записано на <del>мою шайтан-мобилу</del> Xiaomi Redmi 8.</em> Да-да, вы не поверите, но вы поверьте.</p>",
+				"jp":"<p>実はさ、この曲をカバーしたいなーっと思い始めたのは、この曲を初めて聞いた時からだ。でほら完成。</p><p>声を録音したのは7月9~10日の夜で、残り四日間はミクシングやマスタリング中だった。あれってば長い話になりそうだけど、兎に角進行中で沢山の新しいミクシング✕マスタリングの技を思い付いて開発したんだ。結局、スゲー重要な経験になったな。</p><p>てか思えば俺の<em>二番目</em>のカバー曲だな、コイツ（<a href=\"behind_blue_cover\" title=\"Behind Blue COVER\">一番目</a>）。</p><p><em>俺の<del>シャイターンモビーラ</del>Xiaomi Redmi 8を使って録音されてる。</em>信じらんないだろうけど信じるしかない。</p>"
+			}
+		},
 		"nikoniko":{
 			"Name":"NIKONIKO",
 			"ReserveLink":"https://www.newgrounds.com/audio/listen/943556",
