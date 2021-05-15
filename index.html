@@ -1,182 +1,221 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Welcome to H1K0-CC!</title>
-  <link rel="shortcut icon" href="/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/files/style/general.css" type="text/css">
-  <meta name="description" content="Let's select your language!">
-  <meta name="keywords" content="Masahiko AMANO, H1K0, creation, author, creative person, music, musician, composer, arranger, photo, photographer, Масахико АМАНО, Хико, творчество, творческий человек, творческая личность, музыка, музыкант, композитор, аранжировщик, фото, фотограф, 天人楽彦, ヒコ, 芸能, 芸能人, 音楽, 音楽家, 作曲家, 編曲家, 写真, 写真家">
-  <meta name="copyright" lang="en" content="Masahiko AMANO a.k.a. H1K0">
-  <meta property="og:title" content="Welcome to H1K0-CC!">
-  <meta property="og:description" content="Let's select your language!">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="H1K0-CC">
-  <meta property="og:image" content="https://h1k0.fun/files/images/logo.svg">
-  <meta property="og:url" content="https://h1k0.fun">
-  <style>
-    body{
-      width: 100vw;
-      height: 100vh;
-      background: url(/files/images/header.webp);
-      background-size: cover;
-      overflow: hidden;
-    }
-    .black{
-      margin: 0;
-      position: absolute;
-      left: -60vh;
-      bottom: 80vh;
-      width: 9999px;
-      height: 9999px;
-      background: #111;
-      box-shadow: 0 10px 20px black;
-      transform: rotate(20deg);
-      transform-origin: bottom left;
-    }
-    .wrapper{
-      width: 180vh;
-      position: absolute;
-      top: -4vh;
-      left: 36vh;
-      transform: rotate(20deg);
-      transform-origin: top left;
-    }
-    h1{
-      color: white;
-      text-align: center;
-      text-shadow: 0 0 5px white;
-      font-size: 6vh;
-    }
-    .select{
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-    }/*
+	<head>
+		<meta charset="UTF-8" />
+		<title>Welcome to H1K0-CC!</title>
+		<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+		<link rel="stylesheet" href="/files/style/general.css" type="text/css" />
+		<meta name="description" content="Let's select your language!" />
+		<meta
+			name="keywords"
+			content="Masahiko AMANO, H1K0, creation, author, creative person, music, musician, composer, arranger, mix engineer, photo, photographer, Масахико АМАНО, Хико, творчество, творческий человек, творческая личность, музыка, музыкант, композитор, аранжировщик, звукорежиссер, фото, фотограф, 天人楽彦, ヒコ, 芸能, 芸能人, 音楽, 音楽家, 作曲家, 編曲家, 音響エンジニア, ミックスエンジニア, 写真, 写真家"
+		/>
+		<meta name="copyright" lang="en" content="Masahiko AMANO a.k.a. H1K0" />
+		<meta property="og:title" content="Welcome to H1K0-CC!" />
+		<meta property="og:description" content="Let's select your language!" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="H1K0-CC" />
+		<meta
+			property="og:image"
+			content="https://h1k0.fun/files/images/logo.svg"
+		/>
+		<meta property="og:url" content="https://h1k0.fun" />
+		<style>
+			body {
+				width: 100vw;
+				height: 100vh;
+				background: url(/files/images/header.webp);
+				background-size: cover;
+				overflow: hidden;
+			}
+			.black {
+				margin: 0;
+				position: absolute;
+				left: -60vh;
+				bottom: 80vh;
+				width: 9999px;
+				height: 9999px;
+				background: #111;
+				box-shadow: 0 10px 20px black;
+				transform: rotate(20deg);
+				transform-origin: bottom left;
+			}
+			.wrapper {
+				width: 180vh;
+				position: absolute;
+				top: -4vh;
+				left: 36vh;
+				transform: rotate(20deg);
+				transform-origin: top left;
+			}
+			h1 {
+				color: white;
+				text-align: center;
+				text-shadow: 0 0 5px white;
+				font-size: 6vh;
+			}
+			.select {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				width: 100%;
+			} /*
     @media (max-width: 1100px){
       .select{flex-direction: column}
     }*/
-    .flag{
-      margin: 20px 10px;
-      font-size: 0;
-      background-size: cover;
-      background-position: center;
-      width: 20vh;
-      height: 20vh;
-      border-radius: 200px;
-      overflow: hidden;
-      transition: .1s;
-    }
-    .flag:hover{
-      box-shadow: 0 0 20px black;
-      transform: rotate(-20deg);
-    }
-    .flag a{
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    .flag.en{background-image: url(/files/images/flag-us.webp)}
-    .flag.ru{background-image: url(/files/images/flag-ru.webp)}
-    .flag.jp{background-image: url(/files/images/flag-jp.webp)}
-    .logo{
-      position: absolute;
-      bottom: calc(2.5vh + .5vw);
-      left: 2vw;
-      height: 20vh;
-      filter: drop-shadow(.6vw .6vw .3vw #333);
-      animation: float 3s linear infinite;
-    }
-    @keyframes float{
-      0%{
-        bottom: calc(2.5vh + .5vw);
-        filter: drop-shadow(.6vw .6vw .3vw #333);
-      }
-      50%{
-        bottom: calc(2.5vh - .5vw);
-        filter: drop-shadow(.1vw .1vw .05vw #000);
-      }
-      100%{
-        bottom: calc(2.5vh + .5vw);
-        filter: drop-shadow(.6vw .6vw .3vw #333);
-      }
-    }
-    @media (orientation: portrait){
-      .black{
-        width: 100vw;
-        height: 50vh;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 50vh;
-        transform: rotate(0);
-      }
-      .wrapper{
-        top: 3vh;
-        left: 5vw;
-        width: 90vw;
-        height: 44vh;
-        transform: rotate(0);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-      h1{font-size: 5vw}
-      .flag{
-        width: 24vw;
-        height: 24vw;
-      }
-      .flag:hover{transform: rotate(0)}
-      .logo{
-        width: 80vw;
-        bottom: calc(15vh - 10vw + .5vw);
-        left: 10vw;
-      }
-      @keyframes float{
-        0%{
-          bottom: calc(15vh - 10vw + .5vw);
-          filter: drop-shadow(.6vw .6vw .3vw #333);
-        }
-        50%{
-          bottom: calc(15vh - 10vw - .5vw);
-          filter: drop-shadow(.1vw .1vw .05vw #000);
-        }
-        100%{
-          bottom: calc(15vh - 10vw + .5vw);
-          filter: drop-shadow(.6vw .6vw .3vw #333);
-        }
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="black"></div>
-  <div class="wrapper">
-    <h1>Welcome to <u>H1K0-CC</u>! Let's select your language!</h1>
-    <ul class="select">
-      <li class="flag en"><a href="/en" title="English">English</a></li>
-      <li class="flag ru"><a href="/ru" title="Русский">Русский</a></li>
-      <li class="flag jp"><a href="/jp" title="日本語">日本語</a></li>
-    </ul>
-  </div>
-  <img class="logo" src="/files/images/logo.svg" alt="H1K0 LOGO">
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      ym(62113489, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true,
-          webvisor:true
-     });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/62113489" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-</body>
+			.flag {
+				margin: 20px 10px;
+				font-size: 0;
+				background-size: cover;
+				background-position: center;
+				width: 20vh;
+				height: 20vh;
+				border-radius: 200px;
+				overflow: hidden;
+				transition: 0.1s;
+			}
+			.flag:hover {
+				box-shadow: 0 0 20px black;
+				transform: rotate(-20deg);
+			}
+			.flag a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.flag.en {
+				background-image: url(/files/images/flag-us.webp);
+			}
+			.flag.ru {
+				background-image: url(/files/images/flag-ru.webp);
+			}
+			.flag.jp {
+				background-image: url(/files/images/flag-jp.webp);
+			}
+			.logo {
+				position: absolute;
+				bottom: calc(2.5vh + 0.5vw);
+				left: 2vw;
+				height: 20vh;
+				filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
+				animation: float 3s linear infinite;
+			}
+			@keyframes float {
+				0% {
+					bottom: calc(2.5vh + 0.5vw);
+					filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
+				}
+				50% {
+					bottom: calc(2.5vh - 0.5vw);
+					filter: drop-shadow(0.1vw 0.1vw 0.05vw #000);
+				}
+				100% {
+					bottom: calc(2.5vh + 0.5vw);
+					filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
+				}
+			}
+			@media (orientation: portrait) {
+				.black {
+					width: 100vw;
+					height: 50vh;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 50vh;
+					transform: rotate(0);
+				}
+				.wrapper {
+					top: 3vh;
+					left: 5vw;
+					width: 90vw;
+					height: 44vh;
+					transform: rotate(0);
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+				}
+				h1 {
+					font-size: 5vw;
+				}
+				.flag {
+					width: 24vw;
+					height: 24vw;
+				}
+				.flag:hover {
+					transform: rotate(0);
+				}
+				.logo {
+					width: 80vw;
+					bottom: calc(15vh - 10vw + 0.5vw);
+					left: 10vw;
+				}
+				@keyframes float {
+					0% {
+						bottom: calc(15vh - 10vw + 0.5vw);
+						filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
+					}
+					50% {
+						bottom: calc(15vh - 10vw - 0.5vw);
+						filter: drop-shadow(0.1vw 0.1vw 0.05vw #000);
+					}
+					100% {
+						bottom: calc(15vh - 10vw + 0.5vw);
+						filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
+					}
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="black"></div>
+		<div class="wrapper">
+			<h1>Welcome to <u>H1K0-CC</u>! Let's select your language!</h1>
+			<ul class="select">
+				<li class="flag en"><a href="/en" title="English">English</a></li>
+				<li class="flag ru"><a href="/ru" title="Русский">Русский</a></li>
+				<li class="flag jp"><a href="/jp" title="日本語">日本語</a></li>
+			</ul>
+		</div>
+		<img class="logo" src="/files/images/logo.svg" alt="H1K0 LOGO" />
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			;(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						;(m[i].a = m[i].a || []).push(arguments)
+					}
+				m[i].l = 1 * new Date()
+				;(k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a)
+			})(
+				window,
+				document,
+				'script',
+				'https://mc.yandex.ru/metrika/tag.js',
+				'ym'
+			)
+			ym(62113489, 'init', {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+			})
+		</script>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/62113489"
+					style="position: absolute; left: -9999px"
+					alt=""
+				/></div
+		></noscript>
+		<!-- /Yandex.Metrika counter -->
+	</body>
 </html>
