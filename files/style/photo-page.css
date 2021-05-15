@@ -1,4 +1,4 @@
-.album-card{
+.album-card {
 	position: relative;
 	height: 60%;
 	padding-left: 30%;
@@ -9,13 +9,16 @@
 	background-size: cover;
 	background-position: center;
 }
-.album-card:hover{
+.album-card:hover {
 	border: 2px solid #ccc;
+	height: calc(60% + 4px);
 	padding-left: calc(30% - 4px);
 	margin: calc(2% - 2px) 0;
 }
-.album-card a{text-decoration: none}
-.album-card__wrap{
+.album-card a {
+	text-decoration: none;
+}
+.album-card__wrap {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -27,24 +30,29 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgba(0,0,0,.4);
+	background-color: rgba(0, 0, 0, 0.4);
 	text-decoration: none;
 }
-.album-card__wrap:hover{background-color: rgba(0,0,0,.6)}
-.album-card__title{
+.album-card__wrap:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.album-card__title {
 	margin: 0;
 	text-align: center;
 	font-size: 18pt;
 	color: white;
 	cursor: pointer;
 }
-.album-card__date{
+.album-card__date {
 	font-size: 12pt;
 	color: #eee;
 	cursor: pointer;
 }
-.album-card:hover .album-card__title,.album-card__date{text-shadow: 0 0 10px black}
-.album-card__btn{
+.album-card:hover .album-card__title,
+.album-card__date {
+	text-shadow: 0 0 10px black;
+}
+.album-card__btn {
 	margin-top: 24px;
 	display: flex;
 	align-items: center;
@@ -59,9 +67,13 @@
 	box-sizing: border-box;
 	outline: 0;
 }
-.album-card:hover .album-card__btn{box-shadow: 0 0 10px black}
-.album-card__btn:hover{opacity: .9}
-.album-card__btn-icon{
+.album-card:hover .album-card__btn {
+	box-shadow: 0 0 10px black;
+}
+.album-card__btn:hover {
+	opacity: 0.9;
+}
+.album-card__btn-icon {
 	background-image: url(../images/sparkle.svg);
 	background-size: cover;
 	background-position: center;
@@ -71,47 +83,53 @@
 	background-size: auto;
 	margin-right: 4px;
 }
-.album-card__btn-text{
+.album-card__btn-text {
 	font-size: 13px;
 	line-height: 12px;
 }
-.dates{
+.dates {
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: center;
 	list-style: none;
 }
-.dates h3{
+.dates h3 {
 	position: relative;
 	padding: 2% 2%;
 	box-sizing: border-box;
 	border-radius: 10px;
-	transition: .1s;
+	transition: 0.1s;
 	cursor: pointer;
 }
-.dates h3:hover{
+.dates h3:hover {
 	box-shadow: 0 0 20px black;
 	text-shadow: 0 0 5px white;
 	border: 2px solid #ccc;
 	padding: calc(2% - 2px) 5%;
 }
-.dates a{
+.dates a {
 	text-decoration: none;
 	color: white;
 }
-.year{
+.year {
 	position: relative;
 	margin: 1% 0;
 	width: 96%;
 }
-.year-value{background: rgba(0,0,0,.9)}
-.months{
+.year-value {
+	background: rgba(0, 0, 0, 0.9);
+}
+.months {
 	display: none;
 	list-style: inherit;
 }
-.month-value{background: rgba(0,0,0,.8)}
-.days{
+.month-value {
+	background: rgba(0, 0, 0, 0.8);
+}
+.days {
 	display: none;
 	list-style: inherit;
 }
-.day-value{background: rgba(0,0,0,.7)}
+.day-value {
+	background: rgba(0, 0, 0, 0.7);
+}

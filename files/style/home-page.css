@@ -1,8 +1,8 @@
-body{
+body {
 	padding-bottom: 10vh;
 	background: url(../images/cubes.webp);
 }
-header{
+header {
 	position: relative;
 	display: block;
 	width: 100%;
@@ -14,58 +14,62 @@ header{
 	background-position: center;
 	box-shadow: 0 10px 20px black;
 }
-.logo{
+.logo {
 	position: absolute;
-	top: calc(15vw - .5vw);
+	top: calc(15vw - 0.5vw);
 	left: 5vw;
 	width: 88vw;
-	filter: drop-shadow(.6vw .6vw .3vw #333);
+	filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
 	animation: float 3s linear infinite;
 }
-@keyframes float{
-	0%{
-		top: calc(15vw - .5vw);
-		filter: drop-shadow(.6vw .6vw .3vw #333);
+@keyframes float {
+	0% {
+		top: calc(15vw - 0.5vw);
+		filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
 	}
-	50%{
-		top: calc(15vw + .5vw);
-		filter: drop-shadow(.1vw .1vw .05vw #000);
+	50% {
+		top: calc(15vw + 0.5vw);
+		filter: drop-shadow(0.1vw 0.1vw 0.05vw #000);
 	}
-	100%{
-		top: calc(15vw - .5vw);
-		filter: drop-shadow(.6vw .6vw .3vw #333);
+	100% {
+		top: calc(15vw - 0.5vw);
+		filter: drop-shadow(0.6vw 0.6vw 0.3vw #333);
 	}
 }
-nav{
-	position:fixed;
-	top:0;
+nav {
+	position: fixed;
+	top: 0;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	height: 10vh;
-	background-color: rgba(0,0,0,.7);
-	box-shadow: 0 0 20px rgba(0,0,0,.8);
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 	font-weight: bold;
 	font-size: 3vh;
 	text-transform: uppercase;
-	transition: .5s;
+	transition: 0.5s;
 	z-index: 54;
 }
-.navbar{
+.navbar {
 	position: relative;
 	margin: auto;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	transition: .5s;
+	transition: 0.5s;
 }
-.navbar:hover{
+.navbar:hover {
 	text-shadow: 0 0 5px white;
-	font-size: 5vh;
+	font-size: 4vh;
 }
-nav:hover{background-color: rgba(0,0,0,.9)}
-.navbar:hover .navlist{height: 50vh}
-.navlist{
+nav:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.navbar:hover .navlist {
+	height: 50vh;
+}
+.navlist {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -73,23 +77,25 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	position: absolute;
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(216,216,216,.8);
+	background: rgba(216, 216, 216, 0.8);
 	font-size: 3vh;
 	text-align: center;
 	border-radius: 20px;
 	box-shadow: 0 0 20px black;
 	transition: inherit;
 	overflow: hidden;
-	transition: .5s;
+	transition: 0.5s;
 }
-.navlist:hover{background: rgb(216,216,216)}
-.navlist-item{
+.navlist:hover {
+	background: rgb(216, 216, 216);
+}
+.navlist-item {
 	position: relative;
 	height: 10vh;
 	transition: 0.25s;
 	border-bottom: 1px solid #555;
 }
-.navlist-item a{
+.navlist-item a {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -102,34 +108,40 @@ nav:hover{background-color: rgba(0,0,0,.9)}
 	text-decoration: none;
 	color: black;
 }
-.active{
+.active {
 	text-decoration: underline;
 }
-.navlist-item:last-child{border-bottom: 0}
-.navlist-item:hover{
-	background: rgba(0,0,0,.25);
-	font-size: 4vh;
+.navlist-item:last-child {
+	border-bottom: 0;
 }
-h1{
+.navlist-item:hover {
+	background: rgba(0, 0, 0, 0.25);
+	font-size: 3.6vh;
+}
+h1 {
 	text-align: center;
 	margin-top: 5px;
 	text-transform: uppercase;
 	cursor: default;
 }
-h2{
+h2 {
 	margin-left: 20pt;
 	font-size: 20pt;
 	cursor: default;
 }
-p{
+p {
 	margin: 5px 0;
 	text-indent: 10pt;
 	font-size: 16pt;
 	cursor: default;
 }
-p a{color: #aaf}
-p a:hover{color: #ccf}
-.network-links-box{
+p a {
+	color: #aaf;
+}
+p a:hover {
+	color: #ccf;
+}
+.network-links-box {
 	margin-top: 50px;
 	height: 108px;
 	padding: 0;
@@ -140,7 +152,7 @@ p a:hover{color: #ccf}
 	flex-wrap: nowrap;
 	list-style: none;
 }
-.network-link{
+.network-link {
 	display: block;
 	font-size: 0;
 	width: 100px;
@@ -149,59 +161,73 @@ p a:hover{color: #ccf}
 	background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 20px black;
-	transition: .4s;
+	transition: 0.4s;
 }
-.network-link[title="VK"]{background-image: url(../images/vk.webp)}
-.network-link[title="Newgrounds"]{background-image: url(../images/ng.webp)}
-.network-link[title="YouTube"]{background-image: url(../images/yt.webp)}
-.network-link[title="Instagram"]{background-image: url(../images/ig.webp)}
-.network-link[title="GitHub"]{background-image: url(../images/gt.webp)}
-.network-link:hover{
+.network-link[title='VK'] {
+	background-image: url(../images/vk.webp);
+}
+.network-link[title='Newgrounds'] {
+	background-image: url(../images/ng.webp);
+}
+.network-link[title='YouTube'] {
+	background-image: url(../images/yt.webp);
+}
+.network-link[title='Instagram'] {
+	background-image: url(../images/ig.webp);
+}
+.network-link[title='GitHub'] {
+	background-image: url(../images/gt.webp);
+}
+.network-link:hover {
 	border: 4px solid #ccc;
 	border-radius: 36px;
 }
-footer{
+footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	min-height: calc(3vh + 16px + 24px);
 	color: white;
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0, 0, 0, 0.7);
 	text-align: center;
-	box-shadow: 0 0 20px rgba(0,0,0,.8);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 	flex-shrink: 0;
 	cursor: default;
-	transition: .5s;
+	transition: 0.5s;
 	z-index: 54;
 }
-footer:hover{background-color: rgba(0,0,0,.9)}
-footer h3{
+footer:hover {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+footer h3 {
 	margin: 8px auto;
 	font-size: 3vh;
 }
-@media (orientation: portrait){
-	nav{
+@media (orientation: portrait) {
+	nav {
 		height: 12vw;
 		font-size: 3vw;
 	}
-	.navbar:hover{
+	.navbar:hover {
 		font-size: 5vw;
 	}
-	.navbar:hover .navlist{height: 30vh}
-	.navlist{
+	.navbar:hover .navlist {
+		height: 30vh;
+	}
+	.navlist {
 		font-size: 3vw;
 	}
-	.navlist-item{
+	.navlist-item {
 		height: 6vh;
 	}
-	.navlist-item:hover{
+	.navlist-item:hover {
 		font-size: 4vw;
 	}
-	footer h3{
+	footer h3 {
 		font-size: 3vw;
 	}
 }
-.flags-box{
+.flags-box {
 	margin: 0 auto;
 	margin-top: 10px;
 	width: 200px;
@@ -209,18 +235,24 @@ footer h3{
 	display: flex;
 	justify-content: space-around;
 }
-.flag{
+.flag {
 	display: block;
 	width: 30px;
 	height: 22px;
 	background-image: url(../images/flags.webp);
 	border-radius: 5px;
-	transition: .2s;
+	transition: 0.2s;
 }
-.flag:hover{
+.flag:hover {
 	box-shadow: 0 0 4px #ccc;
 	margin-top: -2px;
 }
-.en{background-position: 36px -136px}
-.ru{background-position: -132px -556px}
-.jp{background-position: -6px -346px}
+.en {
+	background-position: 36px -136px;
+}
+.ru {
+	background-position: -132px -556px;
+}
+.jp {
+	background-position: -6px -346px;
+}
