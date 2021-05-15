@@ -1,33 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito&display=swap');
-html,body{
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&family=Nunito&display=swap');
+html,
+body {
 	margin: 0;
 	padding: 0;
-	font-family: "M PLUS Rounded 1c", Nunito;
+	font-family: 'M PLUS 1p', Nunito;
 }
-html:lang(en) q,html:lang(ru) q{quotes: "«" "»"}
-html:lang(jp) q{quotes: "「" "」"}
-html:lang(jp) q[type="strong"]{quotes: "『" "』"}
-html:lang(jp) q[type="double"]{quotes: "《" "》"}
-::-webkit-scrollbar-track {background-color:rgba(0,0,0,.9)}
+html:lang(en) q,
+html:lang(ru) q {
+	quotes: '«' '»';
+}
+html:lang(jp) q {
+	quotes: '「' '」';
+}
+html:lang(jp) q[type='strong'] {
+	quotes: '『' '』';
+}
+html:lang(jp) q[type='double'] {
+	quotes: '《' '》';
+}
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.9);
+}
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background: url(../images/triangles.webp);
 	background-size: cover;
 }
-::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.6)}
-::-webkit-scrollbar{width: 20px}
-.block{
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+::-webkit-scrollbar {
+	width: 20px;
+}
+.block {
 	margin: 2% auto;
 	padding: 5%;
 	box-sizing: border-box;
 	width: 90%;
 	height: 22.5%;
 	border-radius: 5px;
-	background: rgba(0,0,0,.75);
-	box-shadow: 0 0 25px rgba(0,0,0,.8);
+	background: rgba(0, 0, 0, 0.75);
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
 	color: white;
 }
-.section{
+.section {
 	padding: 1%;
 	display: flex;
 	justify-content: space-around;
@@ -39,4 +55,6 @@ html:lang(jp) q[type="double"]{quotes: "《" "》"}
 	border-bottom-left-radius: 10px;
 	list-style: none;
 }
-.section::-webkit-scrollbar{width: 15px}
+.section::-webkit-scrollbar {
+	width: 15px;
+}
